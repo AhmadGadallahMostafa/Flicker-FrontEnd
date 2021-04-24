@@ -1,7 +1,7 @@
 # Flicker-FrontEnd
 Flicker-FrontEnd replica repo
 
-This is the final ReadMe , @ the end of the project it will be updated . GOOD LUCK
+This is not the final ReadMe , @ the end of the project it will be updated . GOOD LUCK
 
 
 In order to work on this project locally follow the following instructions :
