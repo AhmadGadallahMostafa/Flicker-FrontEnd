@@ -1,13 +1,149 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Proxima Nova","helvetica neue",helvetica,arial,sans-serif;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.prints-image-area {
+    background-image: url("https://combo.staticflickr.com/ap/build/images/prints/prints-page-hero.jpg");
+
+    justify-content: center;
+    background-size: cover;
+    background-position: 0px -10vw;
+    height: 50vw;
+
+}
+
+.prints-image-area-text {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  max-width: 30%;
+  font-size: 2vw;
+}
+
+.FAQ-image {
+  width: 100%;
+  height: auto;
+}
+
+.textContainerInfo {
+  padding-top: 3%;
+  padding-bottom: 3%
+}
+
+.textContainerRow {
+  padding-top: 3%;
+  padding-bottom: 3%
+}
+
+body.modal-open {
+  overflow: hidden;
+  margin: auto
+}
+
+.footerText {
+  width: 100%;
+}
+
+.footerButton {
+  position: absolute;
+}
+
+.gridContainer {
+  min-height: 40vw;
+}
+
+.imageGallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  grid-gap: 5px;
+  
+}
+
+.gridItemText {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 5%;
+
+  color: white;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 4px black;
+  font-weight:500;
+}
+
+.gridText {
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+
+.gridItem:hover .gridText {
+  opacity: 100%;
+}
+
+.gridItemSubText {
+  position: absolute;
+  z-index: 1;
+  bottom: 3%;
+  left: 5%;
+
+  color: lightgrey;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 3px black;
+  font-weight:500;
+  font-size:80%;
+}
+
+.gridItemSubText:hover {
+  color: white; 
+}
+
+.gridItem {
+  position: relative;
+  display: grid;
+  cursor: pointer;
+}
+
+.gridItemImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gridItem:hover::before {
+  opacity: 1;
+}
+.gridItem::before   {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
+  margin-top:100px;
+  height: 100px;
+  width: 100%;
+  content: '';
+  z-index:0;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+.gridItem .active {
+  border:2px solid rgb(80, 156, 255);
+  outline:2px solid rgb(80, 156, 255);
+}
+
+.printsNavbarText {
+  margin: 10px;
+}
+
+.search {
+  display: block;
+  direction: ltr;
+  float: right;
 }
