@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import GridText from './components/GridText';
+import GridText from './components/gridText';
 import PrintsButton from './components/PrintsButton'
 import FAQ from './components/FAQ'
 

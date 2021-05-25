@@ -6,9 +6,9 @@ const FAQ = () => {
 	return (  
 		<div>
 			<img src = "https://combo.staticflickr.com/ap/build/images/prints/prints-mid-page-hero.jpg" alt = "Photos" className="FAQ-image"></img>
-			<Container className="textContainerInfo">
+			<Container className="text-container-info">
 			<h2>FAQ</h2>
-				<Row className="textContainerRow">
+				<Row className="text-container-row">
 					<Col><h3 className="print-title">Who can print my photos?</h3><br /><p className="print-text">Only you can print your photos through Flickr. Visitors to your account will not see the option to buy prints of your photos.</p></Col>
 					<Col><h3 className="print-title">Where can I make a photo book?</h3><br /><p className="print-text">We partner with <a href = "https://www.blurb.com/partner/flickr">Blurb</a> and <a href = "https://chatbooks.com">Chatbooks</a> for both hard-cover and soft-cover photo books. Your Flickr photo stream and albums are seamlessly integrated into the book-making process. Check out photo books.</p></Col>
 					<Col><h3 className="print-title">What if something is wrong with my order?</h3><br /><p className="print-text">If you're ever unhappy with your prints or wall art, Flickr will make it right. Simply send us an email within 30 days of receiving your order and we'll help you out. If you have any issues, <a href = "https://help.flickr.com/contact">reach out to our Support Heroes</a>.</p></Col>
