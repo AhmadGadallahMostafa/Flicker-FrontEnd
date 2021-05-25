@@ -1,5 +1,6 @@
 # For Prints
 Type "npm start" on one terminal
+
 Type "npx json-server --watch data/db.json --port 8000" on another terminal (for the mock server)
 
 # Getting Started with Create React App
