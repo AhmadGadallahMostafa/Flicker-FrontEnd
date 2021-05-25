@@ -12,8 +12,8 @@ const PrintsButton = () => {
 	const [galleryImages, setImages] = useState(null);
 	const [searchField, setSearchField] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
-	
-	
+
+
 	useEffect(() => {
 		fetch('http://localhost:8000/images')
 			.then(res => {
@@ -25,8 +25,8 @@ const PrintsButton = () => {
 			})
 	}, [])
 
-	return (  
-		
+	return (
+
 		<div className="prints-image-area">
 			<h1 className="prints-image-area-text">Prints & Wall Art</h1>
 			<br />
@@ -37,25 +37,25 @@ const PrintsButton = () => {
 			<Modal show={show} onHide={() => setShow(false)} size="xl" dialogClassName="modal-90h" scrollable={true} aria-labelledby="example-custom-modal-styling-title">
 
 				<Modal.Header closeButton>
-				<nav className = "printsNavbar"> 
-						<Link to = "#" className = "printsNavbarText">Test</Link>
-						<Link to = "/1" className = "printsNavbarText">Test2</Link>
-						<Link to = "/2" className = "printsNavbarText">Test3</Link>
-						
-						<SearchBox class="navbar-nav text-right" placeholder = "Search" handleChange={(e) => setSearchField(e.target.value)}/>
-				</nav>
+					<nav className="printsNavbar">
+						<Link to="#" className="prints-navbar-text">Test</Link>
+						<Link to="/1" className="prints-navbar-text">Test2</Link>
+						<Link to="/2" className="prints-navbar-text">Test3</Link>
+
+						<SearchBox class="navbar-nav text-right" placeholder="Search" handleChange={(e) => setSearchField(e.target.value)} />
+					</nav>
 				</Modal.Header>
 
-				<Modal.Body className="gridContainer">
-			
-					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} selectedImage={selectedImage} setSelectedImage={setSelectedImage}/>}
+				<Modal.Body className="grid-container">
+
+					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
 					{galleryImages && (galleryImages.filter(image => image.title)) && (galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) == "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
-			
+
 				</Modal.Body>
 
 				<Modal.Footer>
-					<p className = "footerText">Choose a photo to get prints and wall art.</p>
-					<Button variant={"primary"} className = "footerButton" disabled={(selectedImage === null) ? true : false}>Buy prints</Button>
+					<p className="footer-text">Choose a photo to get prints and wall art.</p>
+					<Button variant={"primary"} className="footer-button" disabled={(selectedImage === null) ? true : false}>Buy prints</Button>
 				</Modal.Footer>
 			</Modal>
 

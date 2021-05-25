@@ -26,12 +26,12 @@ body {
   height: auto;
 }
 
-.textContainerInfo {
+.text-container-info {
   padding-top: 3%;
   padding-bottom: 3%
 }
 
-.textContainerRow {
+.text-container-row {
   padding-top: 3%;
   padding-bottom: 3%
 }
@@ -41,19 +41,19 @@ body.modal-open {
   margin: auto
 }
 
-.footerText {
+.footer-text {
   width: 100%;
 }
 
-.footerButton {
+.footer-button {
   position: absolute;
 }
 
-.gridContainer {
+.grid-container {
   min-height: 40vw;
 }
 
-.imageGallery {
+.image-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-items: center;
@@ -61,7 +61,7 @@ body.modal-open {
   
 }
 
-.gridItemText {
+.grid-item-text {
   position: absolute;
   z-index: 1;
   bottom: 10%;
@@ -76,16 +76,16 @@ body.modal-open {
   font-weight:500;
 }
 
-.gridText {
+.grid-text {
   opacity: 0%;
   transition: opacity 0.5s;
 }
 
-.gridItem:hover .gridText {
+.grid-item:hover .grid-text {
   opacity: 100%;
 }
 
-.gridItemSubText {
+.grid-item-subtext {
   position: absolute;
   z-index: 1;
   bottom: 3%;
@@ -101,26 +101,26 @@ body.modal-open {
   font-size:80%;
 }
 
-.gridItemSubText:hover {
+.grid-item-subtext:hover {
   color: white; 
 }
 
-.gridItem {
+.grid-item {
   position: relative;
   display: grid;
   cursor: pointer;
 }
 
-.gridItemImage {
+.grid-item-image {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
 
-.gridItem:hover::before {
+.grid-item:hover::before {
   opacity: 1;
 }
-.gridItem::before   {
+.grid-item::before   {
   display: block;
   position: absolute;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
@@ -133,12 +133,12 @@ body.modal-open {
   transition: opacity 0.5s;
 }
 
-.gridItem .active {
+.grid-item .active {
   border:2px solid rgb(80, 156, 255);
   outline:2px solid rgb(80, 156, 255);
 }
 
-.printsNavbarText {
+.prints-navbar-text {
   margin: 10px;
 }
 
