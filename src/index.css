@@ -4,7 +4,7 @@ body {
 }
 
 .prints-image-area {
-    background-image: url("https://combo.staticflickr.com/ap/build/images/prints/prints-page-hero.jpg");
+    background-image: url("images/prints-page-main.jpg");
 
     justify-content: center;
     background-size: cover;
@@ -42,7 +42,23 @@ body.modal-open {
 }
 
 .footer-text {
-  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  width:70%;
+}
+
+.footer-text-container {
+  width:100%;
+  padding:0px;
+  margin:0px;
+  display: inline;
+}
+
+.footer-button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .footer-button {
@@ -139,11 +155,30 @@ body.modal-open {
 }
 
 .prints-navbar-text {
-  margin: 10px;
+  color:darkblue;
+  transition: color 0.2s;
+  cursor: pointer;
+  padding:5px;
+  margin:5px;
+}
+.prints-navbar-text:hover {
+  color:lightblue;
 }
 
-.search {
-  display: block;
-  direction: ltr;
-  float: right;
+.close-button {
+  background-image: url("images/close-button.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width:30px;
+  height:30px;
+  opacity:0.7;
+  margin-left:10px;
+  cursor:pointer;
+  position:absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.spacing {
+  width:30px;
 }
