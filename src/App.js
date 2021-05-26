@@ -6,7 +6,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <img src="./public/WhatsApp Image 2021-05-26 at 10.49.31 PM.jpeg" className="App-logo" alt="logo" />
         <p>
           Flickr test, Edit <code>src/App.js</code> and save to reload.
         </p>
