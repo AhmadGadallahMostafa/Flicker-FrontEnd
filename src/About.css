@@ -22,6 +22,7 @@
   padding-right: 0;
 }
 
+
 .right-col p{
   margin: 12px 0;
 }
@@ -30,15 +31,14 @@
   font-weight: bold;
   color: #ff0084;
   font-size: 24px; 
-  padding: 25px 0 0;
-  margin: 0 0 16px;
+  padding: 5% 0 0;
+  margin: 0 0 3%;
   line-height: 29px;
-  
 }
 
 .h2-resising{
   font-size: 20px;
-  margin: 16px 0 10px;
+  margin: 3% 0 2%;
   line-height: 25px;
 }
 
@@ -48,13 +48,13 @@
 }
 
 .list{
-  margin: 16px 40px;
+  margin: 3% 10%;
   padding: 0;
 }
 
 .h3-resising{
   font-size: 16px;
-  margin: 0 0 10px;
+  margin: 0 0 1%;
   line-height: 22px;
 }
 .h3-resising b{
@@ -75,23 +75,23 @@
 
 .left-col{
   float: left;
-  width: 200px;
-  min-height: 600px;
-  max-height: 600px;
-  margin-top: 14px;
-  padding-right: 20px;
+  width: 70%;
+  min-height: 80%;
+  max-height: 80%;
+  margin-top: 2%;
+  padding-right: 3%;
   padding-left: 0;
   border-right: 1px solid #dbdbdb;
 }
 
 .upper-list{
-  margin: 4px 25px 0 0;
+  margin: 1% 4% 0 0;
   font-size: 15.18px;
-  width: 200px;
+  width: 80%;
 }
 
 .links{
-  padding: 3px 0;
+  padding: 1% 0;
   margin: 0 !important;
   font-size: 15.18px !important;
   color: #0063dc;
@@ -106,7 +106,7 @@
 }
 
 .sign-up-pic{
-  margin: 28px 0 26px;
+  margin: 3% 0 4%;
   text-align: center !important;
   left: 0;
   color: #0063dc;

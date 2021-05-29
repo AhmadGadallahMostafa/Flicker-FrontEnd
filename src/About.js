@@ -2,14 +2,14 @@ import Member from './images/Team_Member.jpg';
 import Account from './images/create-account-button.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css';
-<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
 const About = () => {
 
     return ( 
-        <div className="about-content">
+        <div id="about-page" className="about-content">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             <div className="row">
-                <div className="col-lg-3 col-md-12 col-12 order-lg-1 order-2 left-col">
+                <div className="col-3 left-col">
                     <div className="upper-list">
                         <p className="links"><a href="" className="links-2 blue-white">Take the tour</a></p>
                         <p className="links"><a href="" className="links-2 blue-white">Flickr blog</a></p>
@@ -18,7 +18,7 @@ const About = () => {
                     </div>
                     <p className="sign-up-pic">
                         <a href="">
-                            <img src={Account} width="193" height="39"alt=""/>
+                            <img src={Account} width="100%" height="100%"alt=""/>
                         </a>
                         <a href="" className="sign-in-center blue-white">or Sign In</a>
                     </p>
@@ -29,7 +29,7 @@ const About = () => {
                         <a href="" className="last blue-white">Get help by email</a>
                     </p>
                 </div>
-                <div className="col-lg-9 col-md-12 col-12 order-lg-2 order-1 right-col">
+                <div className="col-9 right-col">
                     <h1 className="h1-resising">About Flickr</h1>
                     <h2 className="h2-resising">Flickr - almost certainly the best online photo management and
                          sharing application in the world - has <span>two main goals</span>:</h2>
