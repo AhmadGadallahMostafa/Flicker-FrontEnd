@@ -42,8 +42,8 @@
 
   #help-page .button1{
       position: absolute;
-      left:30.5%;
-      margin: 1.35% 0;
+      left:29%;
+      margin: 0.7% 0;
   }
   #help-page .button2{
     position: absolute;
@@ -76,18 +76,33 @@
    
     #help-page .help-center{
         font-size: 35px;
-        font-display: center;
         color: white;
         padding-left: 25%;
-
     }
     #help-page .search-bar{
-        width :379px;
+        padding-left: 2%;
+        width :350px;
         height: 42px;
-        font-size: 14px;
-       color: rgb(206, 204, 204);
-        
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        border-style: none;
+        outline: none;
     }
+
+    #help-page .fill-searchbar{
+        padding-left: 10%;
+        background-color: white;
+        width :350px;
+        height: 42px;
+    }
+
+    #help-page .navbar-search-icon{
+        position: absolute;
+        top:67%;
+        right:83%;
+    }
+    
 
     #help-page .image-credits{
         position:absolute;
@@ -142,6 +157,13 @@
         margin-bottom: 2%;
         display: inline-block;
         background-color: #f3f5f6;
+        color: black;
+        border: 1px solid #f3f5f6; 
+    }
+
+    #help-page .article1:hover{
+        border: 1px solid #006dac;
+        text-decoration: none;
     }
 
     #help-page .article-text{
@@ -149,7 +171,7 @@
     }
 
     #help-page .article1-text{
-        padding: 0 35% 0 0;
+        padding: 0 34% 0 0;
         font-size: 16px;
     }
     #help-page .article2-text{
@@ -158,7 +180,7 @@
     }
     #help-page .article3-text{
         padding: 0 0% 0 0;
-        font-size: 13.2px;
+        font-size: 13px;
     }
     #help-page .article4-text{
         padding: 0 1% 0 0;
@@ -206,7 +228,14 @@
         background-color: #f3f5f6;
         color: black;
         text-decoration: none;
+        border: 1px solid #f3f5f6;
     }
+
+    #help-page .topic1:hover{
+        border: 1px solid #006dac;
+        text-decoration: none;
+    }
+
     #help-page .topic1-title-text{
         padding-right: 40%;
         display: inline;
@@ -226,6 +255,8 @@
         color: #006dac;
         font-size: 26px;
         font-weight: 100;
+        border: none;
+        background-color: white;
     }
     #help-page .left-title:hover + .right-arrow{
         display: inline;
@@ -233,31 +264,96 @@
         font-size: 26px;
     }
     #help-page .right-arrow{
-        display: none !important;
+        /* display: none !important; */
         color: #006dac;
         font-size: 26px;
+        display: inline;
     }
 
     
   /*------------------------------- title padding -------------------------------*/
-  #help-page .Get-started-topic1-title-text{
+  #help-page .get-started-topic1-title-text{
     padding-right: 51%;
     display: inline;
   }
 
-  #help-page .Get-started-topic2-title-text{
+  #help-page .get-started-topic2-title-text{
     padding-right: 68%;
     display: inline;
   }
-  #help-page .Get-started-topic3-title-text{
+  #help-page .get-started-topic3-title-text{
     padding-right: 73.3%;
     display: inline;
   }
-  #help-page .Get-started-topic4-title-text{
+  #help-page .get-started-topic4-title-text{
     padding-right: 61.5%;
     display: inline;
   }
-  #help-page .Get-started-topic5-title-text{
+  #help-page .get-started-topic5-title-text{
     padding-right: 29.3%;
     display: inline;
+  }
+
+
+  #help-page .account-access-topic1-title-text{
+    padding-right: 61%;
+    display: inline;
+  }
+
+  #help-page .account-access-topic2-title-text{
+    padding-right: 64%;
+    display: inline;
+  }
+  #help-page .account-access-topic3-title-text{
+    padding-right: 66%;
+    display: inline;
+  }
+  #help-page .account-access-topic4-title-text{
+    padding-right: 57.5%;
+    display: inline;
+  }
+  #help-page .account-access-topic5-title-text{
+    padding-right: 59.3%;
+    display: inline;
+  }
+
+  #help-page .more-articles-button{
+      text-decoration: none;
+      border-style: none;
+      outline: none;
+      background-color:#128fdc;
+      color: white;
+      Padding: 0.7% 2.5%;
+      border-radius: 3%;
+  }
+
+  #help-page .need-help-footer{
+      background-color: #404040;
+      padding: 2% 5% 2% 5%;
+  }
+
+  #help-page .need-help-text{
+    font-size: 25px;
+    color:white;
+    font-weight: 100;
+    padding: 0.5% 43% 0.5% 40%;
+}
+
+  #help-page .need-help-button-position{
+    padding: 0.5% 43% 0.5% 40%;
+  }
+
+  #help-page .need-help-button{
+      background-color: #404040;
+      border: 1px solid white;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 4% 20% 4% 20%;
+      border-radius: 5%;
+  }
+
+  #help-page .need-help-button:hover{
+      background-color: white;
+      color: #404040;
   }
