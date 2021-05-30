@@ -165,6 +165,10 @@ body.modal-open {
   color:lightblue;
 }
 
+.selected-tab {
+  border-bottom: 2px solid blue;
+}
+
 .close-button {
   background-image: url("images/close-button.png");
   background-repeat: no-repeat;
@@ -181,4 +185,89 @@ body.modal-open {
 
 .spacing {
   width:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.explore-container {
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.explore-images-container {
+  padding-top:1%;
+}
+
+.explore-image-gallery {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  flex-wrap: wrap;
+  justify-items: center;
+  grid-gap: 5px;
+}
+
+.explore-grid-item {
+  height:25vh;
+  width:45vh;
+  flex-grow: 1;
+}
+
+.explore-grid-item-image {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+/*
+.explore-grid-item:hover::before {
+  opacity: 1;
+}
+.explore-grid-item::before   {  
+  display: block;
+  position: relative;
+  overflow:hidden;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  top:0;
+  content: '';
+  z-index:0;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+*/
+.explore-grid-item:hover::before {
+  opacity: 1;
+}
+.explore-grid-item::before   {
+  display:block;
+  position:absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
+  height: inherit;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  width: 45vh;
+  content: '';
+  z-index:0;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+/* UPLOAD */
+.upload-button {
+  text-align: center;
+  margin-top: 1vw;
+}
+
+/* PRINTS */
+.prints-link {
+  display:contents;
 }

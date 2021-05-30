@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import GridText from './components/GridText';
 import PrintsButton from './components/PrintsButton'
+import Explore from './components/Explore'
 import FAQ from './components/FAQ'
 
 
@@ -17,6 +18,9 @@ ReactDOM.render(
           <PrintsButton />
           <GridText />
           <FAQ />
+        </Route>
+        <Route path="/explore">
+          <Explore />
         </Route>
       </Switch>
     </Router>
