@@ -1,40 +1,41 @@
 import React, { useEffect, useState } from 'react'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
-// import Nav from 'react-bootstrap/Nav'
 import GalleryImages from './GalleryImages'
-// import UploadImage from './UploadImage';
 import SearchBox from './SearchBox'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form'
+import Albums from './Albums'
+import UploadButton from './UploadButton'
+import { Link } from 'react-router-dom'
 
 const PrintsButton = () => {
 	const [show, setShow] = useState(false);
 	const [galleryImages, setImages] = useState(null);
+	const [albums, setAlbums] = useState(null);
 	const [searchField, setSearchField] = useState('');
 	const [selectedImage, setSelectedImage] = useState(null);
-
 	const [selectedTab, setSelectedTab] = useState(1);
 
 	const showSelectedTab = () => {
 		switch (selectedTab) {
 			case 1:
 				return (<div>
-					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
+					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} setSelectedImage={setSelectedImage} />}
 					{galleryImages && (galleryImages.filter(image => image.title)) && (galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) == "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
 					</div>);
 			case 2:
-				return <p>Albums</p>;
+				return (<div>
+					{galleryImages && <Albums albums={albums} galleryImages={galleryImages}/>}
+				</div>);
 			case 3:
-				return <p>Upload</p>;
+				return <UploadButton selectedImage={selectedImage} setSelectedImage={setSelectedImage} />;
 			default:
 				return null;
 				// break;
 		}
 	}
-
 
 	useEffect(() => {
 		fetch('http://localhost:8000/images')
@@ -42,8 +43,19 @@ const PrintsButton = () => {
 				return res.json();
 			})
 			.then(data => {
-				console.log(data);
+				// console.log(data);
 				setImages(data);
+			})
+	}, [])
+
+	useEffect(() => {
+		fetch('http://localhost:8000/albums')
+			.then(res => {
+				return res.json();
+			})
+			.then(data => {
+				// console.log(data);
+				setAlbums(data);
 			})
 	}, [])
 
@@ -62,9 +74,9 @@ const PrintsButton = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="mr-auto">
-							<p onClick={() => setSelectedTab(1)} className="prints-navbar-text">Photostream</p>
-							<p onClick={() => setSelectedTab(2)} className="prints-navbar-text">Albums</p>
-							<p onClick={() => setSelectedTab(3)} className="prints-navbar-text">Upload</p>
+							<p onClick={() => {console.log(selectedImage); setSelectedTab(1); setSelectedImage(null)} } className={(selectedTab === 1) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Photostream</p>
+							<p onClick={() => {setSelectedTab(2); setSelectedImage(null)} } className={(selectedTab === 2) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Albums</p>
+							<p onClick={() => {setSelectedTab(3); setSelectedImage(null)} } className={(selectedTab === 3) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Upload</p>
 						</Nav>
 						<Nav>
 							<Form inline>
@@ -85,7 +97,9 @@ const PrintsButton = () => {
 					<div className="footer-text-container">
 						<p className="footer-text">Choose a photo to get prints and wall art.</p>
 					</div>
-					<Button variant={"primary"} className="footer-button" disabled={(selectedImage === null) ? true : false}>Buy prints</Button>
+					<Link to={"/prints/" + selectedImage} className='prints-link'>
+						<Button variant={"primary"} className="footer-button" disabled={(selectedImage === null) ? true : false}>Buy prints</Button>
+					</Link>
 				</Modal.Footer>
 			</Modal>
 		</div>
