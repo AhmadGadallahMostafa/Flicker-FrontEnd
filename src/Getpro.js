@@ -12,6 +12,9 @@ import Topic8 from './images/flickrpro-adobe.jpg'
 import Topic9 from './images/captureone.jpg'
 import Topic10 from './images/priime.jpg'
 import Endbackground from './images/footer-pic.jpg'
+import plans from './images/plansbackground.jpg'
+import back from './images/leftgreyarrow.svg'
+import Prologo from './images/probadge.png'
 
 
 
@@ -297,10 +300,72 @@ const Getpro = () => {
                             </div>
                         </div>
                     </div>
+                </div>  
+            </div>
+            :proplans===1?
+            <div className="pro_3plans" >
+                <img src={plans} width='100%' className="pro_plansimage" alt="" />
+                <div className="pro_planscontent">
+                    <button onClick={()=>setproplans(0)} className="pro_planscontentbutton">Back</button>
+                    <div className="pro_planswrittencontent">
+                        <div className="pro_planstitle"><b className="pro_planstitleb">flickr</b> pro</div>
+                        <div className="pro_plansslogan">Choose your Flickr experience</div>
+                        <div className="pro_planssmall">Change your plan or cancel anytime</div>
+                    </div>
+                    <div className="row pro_plans">
+                        <div className="col-md-4 col-12 order-md-2 order-1">
+                            <div className="pro_plansannual">
+                                <div className="pro_plansbest">BEST VALUE</div>
+                                <img src={Prologo} width='55%' className="pro_plansbadge" alt="" />
+                                <div className="pro_plansannualtitle">Annual Plan</div>
+                                <div className="pro_plansannualwording">
+                                    Get unlimited storage, ad-free, with advanced statistics, 
+                                    worry-free backup via the desktop Auto-Uploadr, and exclusive 
+                                    discounts from Adobe, Blurb, SmugMug, and Priime.
+                                </div>
+                                <div className="pro_plansannualprice">$5.99/month*</div>
+                                <div className="pro_plansannualcomment">* Billed annually. *</div>
+                                <div className="pro_plansannualbuttondiv" >
+                                    <button className="pro_plansannualbutton">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 col-12 order-md-1 order-2">
+                            <br /><br /><br />
+                            <div className="pro_plansannual">
+                                <img src={Prologo} width='55%' className="pro_plansbadge" alt="" />
+                                <div className="pro_plansannualtitle">Monthly Plan</div>
+                                <div className="pro_plansannualwording">
+                                    Get unlimited storage ad-free, plus get advanced statistics, 
+                                    and worry-free backup with the desktop Auto-Uploadr.
+                                </div>
+                                <div className="pro_plansannualprice">$7.99/month</div>
+                                <div className="pro_plansannualbuttondiv" >
+                                    <button className="pro_plansannualbutton2">Select</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-4 col-12 order-md-3 order-3">
+                            <br /><br /><br />
+                            <div className="pro_plansannual">
+                                <img src={Prologo} width='55%' className="pro_plansbadge" alt="" />
+                                <div className="pro_plansannualtitle">3-month Pro</div>
+                                <div className="pro_plansannualwording">
+                                    Get unlimited storage ad-free, plus get advanced statistics, 
+                                    and worry-free backup with the desktop Auto-Uploadr.
+                                </div>
+                                <div className="pro_plansannualprice2">$21.99 /3 months</div>
+                                <div className="pro_plansannualbuttondiv" >
+                                    <button className="pro_plansannualbutton2">Select</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div className="pro_planslastphrase">Each Flickr Pro subscription is 
+                    auto-renewing and non-refundable. <a className="pro_lasta" href="">Learn more.</a> </div>
                 </div>
 
-
-                
             </div>
             :null
             }

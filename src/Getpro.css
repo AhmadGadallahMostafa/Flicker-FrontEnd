@@ -8,6 +8,10 @@
     overflow-x: hidden;
 }
 
+.pro_main{
+    overflow-x: hidden;
+}
+
 /* *************************Welcome Slide************************* */
 .pro_welcome{
     margin-top: 3.8%;
@@ -52,6 +56,10 @@
     text-decoration: none;
     border: none;
     outline: none;
+}
+
+.pro_welcomebutton:hover{
+    filter: brightness(110%);
 }
 /***************************Welcome Slide***************************/
 
@@ -294,6 +302,10 @@
     border: none;
     outline: none;
 }
+
+.pro_welcomebutton2:hover{
+    filter: brightness(110%);
+}
 /***************************Welcome Slide***************************/
 
 /*****************Welcome Slide Media queries for phone ************/
@@ -361,3 +373,215 @@
     }
 }
 /***************************FAQ***************************/
+
+/***************************PLANS***************************/
+.pro_3plans{
+    overflow-x: hidden;
+}
+
+.pro_plansimage{
+    position:relative;
+}
+
+.pro_planscontentbutton{
+    width: 100;
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 15%;
+    left: 12%;
+}
+
+.pro_planstitle{
+    color: white;
+    font-size: 56px;
+    padding-left: 15%;
+    padding-bottom: 3%;
+}
+
+.pro_planstitleb{
+    font-size: 56px;
+}
+
+.pro_planswrittencontent{
+    position: absolute;
+    top:11%;
+    left:38%;
+}
+
+.pro_plansslogan{
+    color: white;
+    font-size: 26px;
+    padding-bottom: 4%;
+}
+
+.pro_planssmall{
+    color: white;
+    font-size: 12px;
+    padding-left: 23%;
+}
+
+.pro_plans{
+    position:absolute;
+    top:45%;
+    left: 14%;
+}
+
+.pro_plansannual{
+    color:black;
+    font-size: 50px;
+    background-color: white;
+}
+
+.pro_plansbest{
+    background-color: #128fdc;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    padding-left: 37%;
+}
+
+.pro_plansbadge{
+    padding-left: 40%;
+    padding-top: 10%;
+}
+
+.pro_plansannualtitle{
+    font-weight: 600;
+    font-size: 50%;
+    padding-left: 27%;
+    padding-top: 5%;
+}
+
+.pro_plansannualwording{
+    padding: 5% 5% 5% 5%;
+    text-align: center;
+    font-size: 30%;
+    color: rgb(56, 55, 55);
+}
+
+.pro_plansannualprice{
+    font-weight: 600;
+    font-size: 40%;
+    padding-left: 30%;
+    padding-top: 8%;
+}
+
+.pro_plansannualprice2{
+    font-weight: 600;
+    font-size: 40%;
+    padding-left: 24%;
+    padding-top: 8%;
+}
+
+.pro_plansannualcomment{
+    padding-left: 30%;
+    font-size: 30%;
+}
+
+.pro_plansannualbutton{
+    outline: none;
+    border:none;
+    text-decoration: none;
+    background-color: #128fdc;
+    color: white;
+    font-size: 90%;
+    font-weight: 600;
+    padding: 5% 25% 5% 25%;
+    border-radius: 3%;
+}
+
+.pro_plansannualbutton2{
+    outline: none;
+    border:2px solid #128fdc;
+    text-decoration: none;
+    background-color:white;
+    color:#128fdc;
+    font-size: 90%;
+    font-weight: 600;
+    padding: 5% 25% 5% 25%;
+    border-radius: 3%;
+}
+
+.pro_plansannualbutton2:hover{
+    background-color: #128fdc;
+    color:white;
+}
+
+.pro_plansannualbutton:hover{
+    filter: brightness(110%);
+}
+
+.pro_plansannualbuttondiv{
+    padding: 6% 0% 10% 24%;
+}
+
+.pro_planslastphrase{
+    position:absolute;
+    top:135%;
+    left: 32%;
+    color: white;
+    filter: brightness(70%);
+    font-weight: 100;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.pro_lasta{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/***************************PLANS***************************/
+
+/*****************Plans Media queries for phone ************/
+@media (max-width: 767.98px) {
+    .pro_planscontentbutton{
+        left:8%;
+        top: 8%;
+    }
+    .pro_planswrittencontent{
+        left:10%;
+        top:10%;
+    }
+    .pro_planstitle{
+        color: white;
+        font-size: 30px;
+        padding-left: 20%;
+        padding-bottom: 2%;
+    }
+    
+    .pro_planstitleb{
+        font-size: 30px;
+    }
+    .pro_planswrittencontent{
+        position: absolute;
+        top:11%;
+        left:18%;
+    }
+    
+    .pro_plansslogan{
+        color: white;
+        font-size: 18px;
+        padding-bottom: 2%;
+    }
+    
+    .pro_planssmall{
+        color: white;
+        font-size: 10px;
+        padding-left: 15%;
+    }
+    .pro_plansimage{
+        position:relative;
+        width:730%;
+        height:1000%;
+    }
+    .pro_planslastphrase{
+        display:none;
+    }
+}
+/*****************Plans Media queries for phone ************/
