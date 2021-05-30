@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+*{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.pro_main2{
+    overflow-x: hidden;
+}
+
+/* *************************Welcome Slide************************* */
+.pro_welcome{
+    margin-top: 3.8%;
+}
+
+.pro_welcomeimage{
+    filter: brightness(78%);
+}
+
+.pro_welcomecontent{
+    position:absolute;
+    top:37%;
+    padding: 0 19% 0 19%;
+}
+
+.pro_welcometitle{
+    font-size: 350%;
+    color:white;
+    text-align: center;
+}
+
+.pro_welcometitleb{
+    font-size: 100%;
+}
+
+.pro_welcomeslogan{
+    color: white;
+    font-size: 200%;
+    font-weight:lighter;
+    text-align: center;
+}
+
+.pro_welcomebutton{
+    background-color: #128fdc;
+    color: white;
+    font-size: 100%;
+    padding: 1% 6% 1% 6%;
+    text-align: center;
+    position: absolute;
+    left:41%;
+    top: 120%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+/***************************Welcome Slide***************************/
+
+/*****************Welcome Slide Media queries for phone ************/
+
+@media (max-width: 767.98px) {
+    .pro_welcomecontent{
+        position:absolute;
+        top:10%;
+        padding: 0 5% 0 5%;
+    }
+    .pro_welcometitle{
+        font-size: 100%;
+        color:white;
+        text-align: center;
+    }
+    .pro_welcomeslogan{
+        color: white;
+        font-size: 90%;
+        font-weight:lighter;
+        text-align: center;
+    }
+    .pro_welcomebutton{
+        background-color: #128fdc;
+        color: white;
+        font-size: 70%;
+        padding: 1% 2% 1% 2%;
+        text-align: center;
+        position: absolute;
+        left:41%;
+        top: 120%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+    }
+
+}
+/*****************Welcome Slide Media queries for phone ************/
+
+/* *************************1st 3 Topics************************* */
+.pro_topic{
+    padding: 2% 0;
+}
+
+.pro_topiccontent{
+    padding: 2% 5% 2% 17%;
+}
+
+.pro_topiccontent2{
+    padding: 2% 15% 2% 7%;
+}
+
+.pro_topicimage22{
+    padding-left: 9%;
+    position:relative;
+    top:0;
+    left:0;
+}
+
+.pro_topicimage33{
+    position:relative;
+    top:0;
+    left:0; 
+}
+
+.pro_topicimage44{
+    position:absolute;
+    top:35%;
+    left:27.5%; 
+    border-radius: 100%;
+}
+
+.pro_topicimage0{
+    position:relative;
+    top:0;
+    left:0; 
+}
+
+.pro_topicimage1{
+    position:relative;
+    top:0;
+    left:0; 
+}
+
+.pro_topicimage2{
+    position:absolute;
+    top:25%;
+    left:17.5%; 
+    animation-name: stat;
+    animation-duration: 2s;
+}
+
+@keyframes stat {
+    from {top:49%;left:14.5%}
+    to {top:25%;left:17.5%}
+  }
+
+
+.pro_topiccontenttitle{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.pro_topiccontentwording{
+    font-size: 16px; 
+}
+
+/* *************************1st 3 Topics************************* */
+
+/* *************************1st 3 Topics Media Queries for mobile************************* */
+@media (max-width: 767.98px) {
+    .pro_topicimage1{
+        width:80%;
+        padding-left: 15%;
+    }
+    .pro_topicimage2{
+        position:absolute;
+        top:25%;
+        left:17.5%; 
+        width: 17.5%;
+        animation-name: stat;
+        animation-duration: 2s;
+        top:25%;
+        left:29.5%;
+    }
+    
+    @keyframes stat {
+        from {top:49%;left:26.5%}
+        to {top:25%;left:29.5%}
+      }
+    .pro_topiccontent2{
+        padding-left: 15%;
+    }  
+    .pro_topiccontent{
+        padding-left: 15%;
+    }
+    .pro_topicimage33{
+        width:90%;
+        padding-left: 5%;
+    }
+    .pro_topicimage{
+        padding-left: 15%;
+    }
+    
+}
+/* *************************1st 3 Topics Media Queries for mobile************************* */
+
+/* *************************7 Topics************************* */
+
+.pro_subtitle{
+    font-weight: 500;
+    font-size: 26px;
+    padding: 3% 10% 3% 10%;
+}
+
+.pro_subbox1{
+    padding-left: 30%;
+    padding-right: 0;
+    padding-bottom: 4%;
+}
+
+.pro_subbox2{
+    border: 1px solid rgb(202, 200, 200);
+}
+
+.pro_subbox3{
+    padding-left: 20%;
+    padding-right: 10%;
+    padding-bottom: 4%;
+}
+
+.pro_subbox4{
+    border: 1px solid rgb(202, 200, 200);
+}
+
+.pro_subcontent{
+    padding: 8%;
+}
+
+.pro_subcontenttitle{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.pro_subcontentwording{
+    padding-top: 5%;
+}
+/* *************************7 Topics************************* */
+
+/* *************************7 Topics Media Queries for mobile************************* */
+@media (max-width: 767.98px) {
+    .pro_subbox1{
+        padding-left: 20%;
+        padding-right: 10%;
+    }
+}
+
+/* *************************7 Topics Media Queries for mobile************************* */
+
+/* *************************Welcome Slide************************* */
+.pro_welcome2{
+    position:relative;
+    top:0;
+    left: 0;
+}
+.pro_welcomecontent2{
+    position:absolute;
+    top:25%;
+    left:12%;
+    padding: 0 19% 0 19%;
+}
+
+.pro_welcometitle2{
+    font-size: 350%;
+    color:white;
+    text-align: center;
+}
+
+.pro_welcometitleb2{
+    font-size: 100%;
+}
+
+.pro_welcomeslogan2{
+    color: white;
+    font-size: 200%;
+    font-weight:lighter;
+    text-align: center;
+}
+
+.pro_welcomebutton2{
+    background-color: #128fdc;
+    color: white;
+    font-size: 100%;
+    padding: 1% 6% 1% 6%;
+    text-align: center;
+    position: absolute;
+    left:41%;
+    top: 120%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+/***************************Welcome Slide***************************/
+
+/*****************Welcome Slide Media queries for phone ************/
+
+@media (max-width: 767.98px) {
+    .pro_welcomecontent2{
+        position:absolute;
+        top:20%;
+        padding: 0 5% 0 5%;
+    }
+    .pro_welcometitle2{
+        font-size: 100%;
+        color:white;
+        text-align: center;
+    }
+    .pro_welcomeslogan2{
+        color: white;
+        font-size: 90%;
+        font-weight:lighter;
+        text-align: center;
+    }
+    .pro_welcomebutton2{
+        background-color: #128fdc;
+        color: white;
+        font-size: 70%;
+        padding: 1% 2% 1% 2%;
+        text-align: center;
+        position: absolute;
+        left:38%;
+        top: 120%;
+        text-decoration: none;
+        border: none;
+        outline: none;
+    }
+
+}
+/*****************Welcome Slide Media queries for phone ************/
+
+/***************************FAQ***************************/
+.pro_faq{
+    font-size: 28px;
+    font-weight: 500;
+    padding: 3% 10% 3% 15%;
+}
+
+.pro_faqcontent{
+    padding: 0% 0% 5% 34%;
+}
+
+.pro_faqcontenttitle{
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.pro_faqcontentwording{
+    padding-top: 4%;
+}
+
+@media (max-width: 767.98px) {
+    .pro_faqcontent{
+        padding: 0% 0% 5% 15%;
+    }
+    .pro_faq{
+        padding-left: 13.5%;
+    }
+}
+/***************************FAQ***************************/
