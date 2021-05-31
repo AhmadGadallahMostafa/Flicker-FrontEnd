@@ -113,7 +113,6 @@ jobs:
           sudo mkdir -p /var/www/thealphaflickr.xyz/
           sudo chown -R $USER:$USER /var/www/thealphaflickr.xyz/
           sudo cp -r build/* /var/www/thealphaflickr.xyz/
-          sudo cp ~/FrontEnd/Server/config /etc/nginx/sites-available/default
           sudo systemctl restart nginx
           EOF
       
