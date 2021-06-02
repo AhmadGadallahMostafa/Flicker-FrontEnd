@@ -13,15 +13,14 @@ import Topic9 from './images/captureone.jpg'
 import Topic10 from './images/priime.jpg'
 import Endbackground from './images/footer-pic.jpg'
 import plans from './images/plansbackground.jpg'
-import back from './images/leftgreyarrow.svg'
 import Prologo from './images/probadge.png'
-
 
 
 
 import { useState } from 'react';
 import Getpronav from './Getpro-navbar';
-import './Getpro.css'
+import './Getpro.css';
+import Footer from './Footer';
 
 const Getpro = () => {
     const [proplans,setproplans]=useState(0);
@@ -326,7 +325,9 @@ const Getpro = () => {
                                 <div className="pro_plansannualprice">$5.99/month*</div>
                                 <div className="pro_plansannualcomment">* Billed annually. *</div>
                                 <div className="pro_plansannualbuttondiv" >
-                                    <button className="pro_plansannualbutton">Select</button>
+                                    <a href="/account/upgrade/pro/pro-annual">
+                                        <button className="pro_plansannualbutton">Select</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -341,7 +342,9 @@ const Getpro = () => {
                                 </div>
                                 <div className="pro_plansannualprice">$7.99/month</div>
                                 <div className="pro_plansannualbuttondiv" >
-                                    <button className="pro_plansannualbutton2">Select</button>
+                                    <a href="/account/upgrade/pro/pro-monthly">
+                                        <button className="pro_plansannualbutton2">Select</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +359,9 @@ const Getpro = () => {
                                 </div>
                                 <div className="pro_plansannualprice2">$21.99 /3 months</div>
                                 <div className="pro_plansannualbuttondiv" >
-                                    <button className="pro_plansannualbutton2">Select</button>
+                                    <a href="/account/upgrade/pro/pro-3month">
+                                        <button className="pro_plansannualbutton2">Select</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -369,6 +374,7 @@ const Getpro = () => {
             </div>
             :null
             }
+            <Footer/>
         </div>
         
 
