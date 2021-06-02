@@ -7,6 +7,9 @@
   } 
   /*------------------------------- base styles -------------------------------*/
 
+  .Home{
+    overflow-x: hidden;
+  }
 
   #help-page .opacity-img{
     filter: brightness(50%);
@@ -356,4 +359,100 @@
   #help-page .need-help-button:hover{
       background-color: white;
       color: #404040;
+  }
+
+  @media (max-width: 767.98px) {
+    .top{
+        padding: 0 !important;;
+    }
+    .flickr-help-logo{
+        width: 20% !important;;
+    }
+    .button1{
+        position: absolute !important;
+        left: 20% !important;
+        top: -3% !important;
+        margin: 0 !important;
+    }
+    .button2{
+        display: none !important;
+    }
+    .button3{
+        position: absolute !important;
+        left:57% !important;
+        top: 8% !important;
+        width: 5% !important;
+    }
+    .button4{
+        position: absolute !important;
+        left:62% !important;
+        top: 3% !important;
+    }
+    .button5{
+        display: none !important;
+    }
+    .image-credits{
+        position: absolute !important;
+        top:19% !important;
+        left:78% !important;
+        padding: 0 !important;
+        font-size: 50% !important;
+    }
+    .search{
+        position:absolute !important;
+        left:24% !important;
+        top: 8% !important;
+    }
+    .help-center{
+        font-size: 120% !important;
+    }
+    .fill-searchbar{
+        width:120% !important;
+        height: 50% !important;
+    }
+    .search-bar{
+        width:100% !important;
+        height: 50% !important;
+        font-size: 80% !important;
+    }
+    .circle{
+        position:absolute;
+        left:35%;
+        top: 24%;
+    }
+    .all-sys-text{
+        top:23%;
+        left: 43%;
+        right: 0;
+        font-size: 10px !important;
+        display: inline-block !important;
+    }
+    .all-systems{
+        background-color: #f3f5f6;
+        padding: 5% 0% !important;
+    }
+    .popular-text{
+        padding:0 8% 0 8.8% !important;
+        margin: 0 0 3% 0;
+        text-align: center;
+    }
+    .browse-text{
+        font-size: 30px;
+        padding: 0 15.55% 0 15.55% !important;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .need-help-text{
+        font-size: 25px;
+        color:white;
+        font-weight: 100;
+        padding: 0.5% 13% 0.5% 10% !important;
+        text-align: center;
+    }
+    .need-help-button-position{
+        padding: 0.5% 33% 0.5% 25% !important; 
+    }
+    
+    
+    
   }

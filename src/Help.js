@@ -8,17 +8,19 @@ import './Help.css';
 import { useState } from 'react';
 import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
+import Footer from './Footer';
 
 
 const Help = () => {
     const [leftcoltopics,setleftcoltopics]=useState(0);
     console.log(leftcoltopics);
     return ( 
-        <div id="help-page" className="Home">
-            {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta> */}
+        <div>
+            <div id="help-page" className="Home">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             <div className="home0">
                 <img src={background} width='100%' max-height='100%' className="opacity-img" alt=""/>
-                <nav className="top">
+                <div className="top">
                     <a href="flickr-help">
                         <img src={flickrhelp} width='106.57' height='22.85' className="flickr-help-logo" alt=""/>
                     </a>
@@ -49,7 +51,7 @@ const Help = () => {
                     <img src={twitter}  className="button3 wbutton" alt=""/>
                     <a href="" className="button4 wbutton">Follow @FlickrHelp</a>
                     <a href="" className="button5 wbutton">flickr.com</a>
-                </nav>
+                </div>
                 <div className="search">
                     <span className="help-center">Help Center</span>
                     <br/>
@@ -116,7 +118,7 @@ const Help = () => {
 
                     {/* **********************Flickr topics**************************/}
                     <div className="row topics-structure">
-                        <div className="col-3">
+                        <div className="col-md-3 col-12 order-1">
                             <div className="left-title left-title1" >
                                 <button onClick={()=>setleftcoltopics(0)} className="left-title-text">
                                     Get Started
@@ -252,7 +254,7 @@ const Help = () => {
 
 
 
-                        <div className="col-9 topics-right">
+                        <div className="col-md-9 col-12 order-2 topics-right">
                             {   leftcoltopics===0?
                                 <div className="get-started-topics">
                                     <a href="" className="topics-link">
@@ -1285,7 +1287,9 @@ const Help = () => {
                 </div>
             </div>
         </div>
-
+        <Footer/>
+        </div>
+        
      );
 }
  
