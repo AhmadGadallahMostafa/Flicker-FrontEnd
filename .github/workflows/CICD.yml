@@ -64,7 +64,7 @@ jobs:
         run: |
           cat >>~/Testing.sh<<END
           #!/bin/bash
-          # python3 ~/FrontEnd/Testing/TestSuite.py 
+          python3 ~/FrontEnd/Testing/TestSuite.py 
           END
           chmod +x ~/Testing.sh
       
