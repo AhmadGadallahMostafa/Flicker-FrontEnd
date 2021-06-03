@@ -49,6 +49,7 @@ jobs:
           sudo apt install python3-pip
           pip --version
           sudo pip install -r ~/FrontEnd/Testing/requirements.txt
+          whereis chromedriver
           END
           chmod +x ~/SetEnviroment.sh
       
