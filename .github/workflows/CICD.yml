@@ -47,13 +47,13 @@ jobs:
           sudo apt install python3 
           python3 ––version
           sudo apt install python3-pip
-          pip3 --version
+          pip --version
           sudo apt install python3-venv
           python3 -m venv ~/venv
           source ~/venv/bin/activate
-          sudo pip3 install -r ~/FrontEnd/Testing/requirements.txt
+          sudo pip install -r ~/FrontEnd/Testing/requirements.txt
           echo Done Installing ...
-          pip3 list
+          pip list
           END
           chmod +x ~/SetEnviroment.sh
       
@@ -67,7 +67,7 @@ jobs:
           cat >>~/Testing.sh<<END
           #!/bin/bash
           source ~/venv/bin/activate
-          pip3 list
+          pip list
           python3 ~/FrontEnd/Testing/TestSuite.py 
           END
           chmod +x ~/Testing.sh
