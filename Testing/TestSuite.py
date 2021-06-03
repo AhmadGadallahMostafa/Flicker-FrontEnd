@@ -146,7 +146,7 @@ view_photo_test_suite.addTest(WebsiteMain.FlickrViewPhoto('test_opened_photo'))
 comment_test_suite = unittest.TestSuite()
 comment_test_suite.addTest(WebsiteMain.FlickrComments('test_comment'))
 #comment_test_suite.addTest(WebsiteMain.FlickrComments('test_edit_comment'))
-runner = HtmlTestRunner.HTMLTestRunner(report_name="Flicker comment tests",report_title="Comment test", combine_reports = True).run(comment_test_suite)
+# runner = HtmlTestRunner.HTMLTestRunner(report_name="Flicker comment tests",report_title="Comment test", combine_reports = True).run(comment_test_suite)
 
 msg_test_suite = unittest.TestSuite()
 
