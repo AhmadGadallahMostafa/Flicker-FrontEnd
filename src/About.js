@@ -1,13 +1,18 @@
 import Member from './images/Team_Member.jpg';
 import Account from './images/create-account-button.png';
+import Navbar from './Navbar';
+import Footer from './Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './About.css';
 
 const About = () => {
 
     return ( 
-        <div id="about-page" className="about-content">
+        <div>
+            <Navbar/>
+            <div id="about-page" className="about-content">
             <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+            <br /><br /><br />
             <div className="row">
                 <div className="col-3 left-col">
                     <div className="upper-list">
@@ -648,6 +653,9 @@ const About = () => {
                 </div>
             </div>
         </div>
+            <Footer/>
+        </div>
+        
      );
 }
  
