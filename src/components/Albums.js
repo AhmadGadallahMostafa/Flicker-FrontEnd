@@ -1,22 +1,28 @@
-import { useState } from "react";
+const Albums = ({ albums, galleryImages }) => {
 
-const Albums = ({ albums, galleryImages, ids, title, setSelectedAlbum }) => {
-
-	const [isActive, setActive] = useState('');
+	const getSrc = (id) => {
+		fetch('https://www.thealphaflickr.xyz/api/photos/photo/' + id) // Photo - Returns photo itself
+			.then(res => {
+				return res.json();
+			})
+			.then(data => {
+				// console.log(data.length);
+				// setFavImages(data);
+				return data;
+			})
+			.catch(error => {
+				console.log(error);
+			  })
+	}
 
 	return (
 		<div className="image-gallery">
 			{albums.map((album => (
-				<div className="grid-item active" key={album.id}
-				// <div className = "grid-item"
-				// {isActive ? "grid-item" : "grid-item selectedImage"}
-				//onClick={() => setSelectedImage(image)}	
-				// onClick={() => selectImage2} onClick={() => console.log(isActive)}
-				>
-					<img className="grid-item-image" alt={album.title} src={galleryImages.find(image => (image.id === album.ids[0])).url} />
+				<div className="grid-item active" key={album.id}>
+					<img className="grid-item-image" alt={album.name} src={getSrc(albums.photo[0]).photoPath} /* also won't work *//> 
 					<div className="grid-text">
-						<div className="grid-item-text" >{album.title}</div>
-						<div className="grid-item-subtext" >{album.ids.length} photos</div>
+						<div className="grid-item-text" >{album.name}</div>
+						<div className="grid-item-subtext" >{album.items} photos</div>
 					</div>
 				</div>
 			)))}

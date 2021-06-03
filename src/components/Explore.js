@@ -1,48 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
-// import Nav from 'react-bootstrap/Nav'
-import ExploreImages from './ExploreImages'
-// import UploadImage from './UploadImage';
-import SearchBox from './SearchBox'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
-import InfiniteImageScrolling from './InfiniteImageScrolling'
+import React, { useEffect, useState } from 'react';
+import ExploreImages from './ExploreImages';
+import { Link } from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 const PrintsButton = () => {
 	const [exploreImages, setImages] = useState(null);
-	const [selectedImage, setSelectedImage] = useState(null);
-	const [selectedTab, setSelectedTab] = useState(1);
-	const [pageNumber, setPageNumber] = useState(1);
-
-	const showSelectedTab = () => {
-		switch (selectedTab) {
-			case 1:
-				return (<div>
-					{exploreImages && (exploreImages.filter(image => image.title)) && <ExploreImages exploreImages={exploreImages} />}
-					</div>);
-			case 2:
-				return null;
-			default:
-				return null;
-				// break;
-		}
-	}
+	const [currentLength, setCurrentLength] = useState(0);
+	const [previousLength, setPreviousLength] = useState(0);
 
 	useEffect(() => {
-		fetch('http://localhost:8000/images')
-			.then(res => {
-				return res.json();
-			})
+
+		axios({
+			method: 'GET',
+			url: ('https://www.thealphaflickr.xyz/api/photos/' + 15), // Photo - Returns list of recently uploaded photos without the photo
+		})
 			.then(data => {
-				console.log(data);
+				// console.log(data.length);
 				setImages(data);
 			})
+			.catch(e => {
+				console.log(e.response);
+			});
+
 	}, [])
 
-	InfiniteImageScrolling(pageNumber);
+	const fetchData = () => {
+		setPreviousLength(currentLength);
+
+		axios({
+			method: 'GET',
+			url: ('https://www.thealphaflickr.xyz/api/photos/' + (currentLength + 15)), // Photo - Returns list of recently uploaded photos without the photo
+		})
+			.then(data => {
+				setImages(data);
+				setCurrentLength(data.length);
+			})
+			.catch(e => {
+				console.log(e.response);
+			});
+	}
 
 	return (
 		<div className="explore-container">
@@ -50,23 +49,52 @@ const PrintsButton = () => {
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mr-auto">
-						<p onClick={() => { setSelectedTab(1); }} className={(selectedTab === 1) ? "prints-navbar-text selected-tab" : "prints-navbar-text"}>Photostream</p>
-						<p onClick={() => { setSelectedTab(2); }} className={(selectedTab === 2) ? "prints-navbar-text selected-tab" : "prints-navbar-text"}>Albums</p>
-						<p onClick={() => { setSelectedTab(3); }} className={(selectedTab === 3) ? "prints-navbar-text selected-tab" : "prints-navbar-text"}>Upload</p>
+						<Link Link to={"/explore"} className="prints-navbar-text selected-tab">Explore</Link>
+						<Link Link to={"/photos/tags"} className="prints-navbar-text">Trending</Link>
+						<Link Link to={"/events"} className="prints-navbar-text">Events</Link>
 					</Nav>
 					<Nav>
-						<div className="spacing">a</div>
+						<NavDropdown title="More" id="nav-dropdown">
+							<NavDropdown.Item>
+								<Link Link to={"commons"}>The Commons</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"galleries"}>Galleries</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"map"}>World Map</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"services"}>App Garden</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"cameras"}>Camera Finder</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"weekly"}>The Weekly Flickr</Link>
+							</NavDropdown.Item>
+							<NavDropdown.Item>
+								<Link Link to={"blogs"}>Flickr Blog</Link>
+							</NavDropdown.Item>
+						</NavDropdown>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
 			<div className="explore-images-container">
-				{showSelectedTab()}
+				{exploreImages && <InfiniteScroll
+					dataLength={currentLength}
+					next={() => fetchData()}
+					hasMore={(currentLength - previousLength) > 0 ? false : true}
+					loader={<span><br /><p className="infinite-scroll-text">Loading...</p></span>}
+					endMessage={<span><br /><p className="infinite-scroll-text">No more images here!</p></span>}
+				>
+					{exploreImages && (exploreImages.filter(image => image.title)) && <ExploreImages exploreImages={exploreImages} />}
+				</InfiniteScroll>
+				}
 			</div>
-
-			{/*<Button onClick={() => setPageNumber(2)}> a</Button>*/}
 		</div>
 
-		
+
 	);
 }
 

@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import Button from 'react-bootstrap/Button'
-import Modal from 'react-bootstrap/Modal'
-import GalleryImages from './GalleryImages'
-import SearchBox from './SearchBox'
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
-import Albums from './Albums'
-import UploadButton from './UploadButton'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import GalleryImages from './GalleryImages';
+import SearchBox from './SearchBox';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Form from 'react-bootstrap/Form';
+import Albums from './Albums';
+import UploadButton from './UploadButton';
+import { Link } from 'react-router-dom';
+const userId = 1; // placeholder
 
 const PrintsButton = () => {
 	const [show, setShow] = useState(false);
@@ -30,7 +31,7 @@ const PrintsButton = () => {
 					{galleryImages && <Albums albums={albums} galleryImages={galleryImages}/>}
 				</div>);
 			case 3:
-				return <UploadButton selectedImage={selectedImage} setSelectedImage={setSelectedImage} />;
+				return <UploadButton setSelectedImage={setSelectedImage}/>;
 			default:
 				return null;
 				// break;
@@ -38,7 +39,7 @@ const PrintsButton = () => {
 	}
 
 	useEffect(() => {
-		fetch('http://localhost:8000/images')
+		fetch('https://www.thealphaflickr.xyz/api/photos/user-photos/' + userId) // Photo - Returns photos uploaded by given user
 			.then(res => {
 				return res.json();
 			})
@@ -46,21 +47,40 @@ const PrintsButton = () => {
 				// console.log(data);
 				setImages(data);
 			})
-	}, [])
+			.catch(error => {
+				  console.log(error);
+				})
+		}, [])
 
-	useEffect(() => {
-		fetch('http://localhost:8000/albums')
+	const updateImageData = () => {
+		fetch('https://www.thealphaflickr.xyz/api/photos/user-photos/' + userId) // Photo - Returns photos uploaded by given user
 			.then(res => {
 				return res.json();
 			})
 			.then(data => {
 				// console.log(data);
-				setAlbums(data);
+				setImages(data);
 			})
+			.catch(error => {
+				console.log(error);
+			  })
+	}
+
+	useEffect(() => {
+		fetch('https://www.thealphaflickr.xyz/api/album/user-albums/' + userId) // Album - viewing albums
+			.then(res => {
+				return res.json();
+			})
+			.then(albums => {
+				// console.log(data);
+				setAlbums(albums);
+			})
+			.catch(error => {
+				console.log(error);
+			  })
 	}, [])
 
 	return (
-
 		<div className="prints-image-area">
 			<h1 className="prints-image-area-text">Prints & Wall Art</h1>
 			<br />
@@ -74,7 +94,7 @@ const PrintsButton = () => {
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="mr-auto">
-							<p onClick={() => {console.log(selectedImage); setSelectedTab(1); setSelectedImage(null)} } className={(selectedTab === 1) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Photostream</p>
+							<p onClick={() => {setSelectedTab(1); setSelectedImage(null); updateImageData() }} className={(selectedTab === 1) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Photostream</p>
 							<p onClick={() => {setSelectedTab(2); setSelectedImage(null)} } className={(selectedTab === 2) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Albums</p>
 							<p onClick={() => {setSelectedTab(3); setSelectedImage(null)} } className={(selectedTab === 3) ? "prints-navbar-text selected-tab" : "prints-navbar-text" }>Upload</p>
 						</Nav>
