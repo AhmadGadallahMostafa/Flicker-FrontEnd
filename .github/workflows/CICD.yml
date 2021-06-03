@@ -52,6 +52,8 @@ jobs:
           python3 -m venv ~/venv
           source ~/venv/bin/activate
           sudo pip3 install -r ~/FrontEnd/Testing/requirements.txt
+          echo Done Installing ...
+          pip3 list
           END
           chmod +x ~/SetEnviroment.sh
       
