@@ -439,15 +439,11 @@ class FlickrViewPhoto(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
         path = "chromedriver.exe"
-<<<<<<< HEAD
-        inst.driver = webdriver.Chrome(path)
-=======
         chrome_options = webdriver.ChromeOptions()
         chrome_options.headless = True
         chrome_options.add_argument('--window-size=1920,1080')
         inst.driver = webdriver.Chrome(
         executable_path=path, chrome_options=chrome_options)
->>>>>>> 035389e6d277cda47fb200c03ad9679f38cd1753
         inst.driver.get("https://www.flickr.com/")
         inst.driver.maximize_window()
         login(inst.driver, "m")
@@ -468,15 +464,11 @@ class FlickrComments(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
         path = "chromedriver.exe"
-<<<<<<< HEAD
-        inst.driver = webdriver.Chrome(path)
-=======
         chrome_options = webdriver.ChromeOptions()
         chrome_options.headless = True
         chrome_options.add_argument('--window-size=1920,1080')
         inst.driver = webdriver.Chrome(
         executable_path=path, chrome_options=chrome_options)
->>>>>>> 035389e6d277cda47fb200c03ad9679f38cd1753
         inst.driver.get("https://www.flickr.com/")
         inst.driver.maximize_window()
         login(inst.driver, "m")
@@ -493,13 +485,9 @@ class FlickrComments(unittest.TestCase):
         photo_view_page.comment()
         self.driver.close()
         path = "chromedriver.exe"
-<<<<<<< HEAD
-        self.driver = webdriver.Chrome(path)
-=======
         chrome_options = webdriver.ChromeOptions()
         chrome_options.headless = True
         chrome_options.add_argument('--window-size=1920,1080')
->>>>>>> 035389e6d277cda47fb200c03ad9679f38cd1753
         self.driver.get("https://www.flickr.com/")
         self.driver.maximize_window()
         login(self.driver, "k")
