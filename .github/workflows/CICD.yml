@@ -65,6 +65,7 @@ jobs:
           cat >>~/Testing.sh<<END
           #!/bin/bash
           source ~/venv/bin/activate
+          pip3 list
           python3 ~/FrontEnd/Testing/TestSuite.py 
           END
           chmod +x ~/Testing.sh
