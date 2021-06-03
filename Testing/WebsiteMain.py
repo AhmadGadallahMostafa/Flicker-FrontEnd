@@ -412,7 +412,7 @@ class FlikcrPrints(unittest.TestCase):
 class FlickrViewPhoto(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
-        path = "C:\Program Files (x86)\chromedriver.exe"
+        path = "chromedriver.exe"
         inst.driver = webdriver.Chrome(path)
         inst.driver.get("https://www.flickr.com/")
         inst.driver.maximize_window()
@@ -433,7 +433,7 @@ class FlickrViewPhoto(unittest.TestCase):
 class FlickrComments(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
-        path = "C:\Program Files (x86)\chromedriver.exe"
+        path = "chromedriver.exe"
         inst.driver = webdriver.Chrome(path)
         inst.driver.get("https://www.flickr.com/")
         inst.driver.maximize_window()
@@ -452,7 +452,7 @@ class FlickrComments(unittest.TestCase):
         photo_view_page = PhotoViewPage(self.driver)
         photo_view_page.comment()
         self.driver.close()
-        path = "C:\Program Files (x86)\chromedriver.exe"
+        path = "chromedriver.exe"
         self.driver = webdriver.Chrome(path)
         self.driver.get("https://www.flickr.com/")
         self.driver.maximize_window()
