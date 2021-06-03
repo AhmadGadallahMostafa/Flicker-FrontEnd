@@ -38,18 +38,37 @@ jobs:
           git clone FrontEndRepo:AhmadGadallahMostafa/Flicker-FrontEnd.git ~/FrontEnd
         env:
           SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
+
+      # Task[2]: create bach scripts to ease Setting the Enviroment
+      - name: Creat SetEnviroment.sh scripts
+        run: |
+          cat >>~/SetEnviroment.sh<<END
+          #!/bin/bash
+          sudo apt install python3 
+          python3 ––version
+          sudo apt install python3-pip
+          pip3 --version
+          sudo apt install python3-venv
+          python3 -m venv venv
+          source venv/bin/activate
+          pip install -r ~/FrontEnd/Testing/requirements.txt
+          END
+          chmod +x ~/SetEnviroment.sh
       
-      # Task[2]: create bach scripts to ease Testing
+      # Task[3]: Run SetEnviroment script
+      - name: Run SetEnviroment.sh scripts
+        run: ~/SetEnviroment.sh
+
+      # Task[4]: create bach scripts to ease Testing
       - name: Creat Testing.sh scripts
         run: |
           cat >>~/Testing.sh<<END
           #!/bin/bash
-          echo "Testing Done..."
-          ls ~/FrontEnd && echo "empty"
+          # python3 ~/FrontEnd/Testing/TestSuite.py 
           END
           chmod +x ~/Testing.sh
       
-      # Task[3]: Run testing scripts Scripts
+      # Task[5]: Run testing scripts Scripts
       - name: Run Testing.sh scripts
         run: ~/Testing.sh
   
