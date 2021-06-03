@@ -214,52 +214,138 @@ body.modal-open {
   grid-gap: 5px;
 }
 
-.explore-grid-item {
-  height:25vh;
-  width:45vh;
-  flex-grow: 1;
-}
-
 .explore-grid-item-image {
   max-height: 100%;
   min-width: 100%;
   object-fit: cover;
 }
 
-/*
-.explore-grid-item:hover::before {
-  opacity: 1;
+/* EXPLORE TEXT */
+
+.explore-grid-item {
+  height:30vh;
+  flex-grow: 1;
+  /*background-color:black;*/
 }
-.explore-grid-item::before   {  
-  display: block;
-  position: relative;
-  overflow:hidden;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  top:0;
-  content: '';
-  z-index:0;
-  opacity:0;
-  transition: opacity 0.5s;
-}
-*/
-.explore-grid-item:hover::before {
-  opacity: 1;
-}
-.explore-grid-item::before   {
-  display:block;
+
+.explore-grid-item-text {
   position:absolute;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
-  height: inherit;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  width: 45vh;
-  content: '';
-  z-index:0;
-  opacity:0;
+  
+  padding-left: 1vh;
+  padding-top: 1vh;
+
+  color: white;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: calc(100% - 200px);
+  white-space:nowrap; 
+  text-shadow: 0px 0px 4px black;
+  font-weight:500;
+}
+
+.explore-grid-item:hover .explore-grid-text {
+  opacity: 100%;
+}
+
+.explore-grid-item-subtext {
+  position: absolute;
+  padding-left: 1vh;
+  padding-top: 3vh;
+
+  color: lightgrey;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 3px black;
+  font-weight:500;
+  font-size:80%;
+}
+
+.explore-grid-item-subtext:hover {
+  color: white; 
+}
+
+.explore-image-footer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: 50px;
+  margin-top: 25px;
+  z-index: 5;
+  bottom: 8.3vh;
+  opacity: 0;
+}
+
+.explore-grid-item:hover .explore-image-footer {
+  opacity: 100%;
   transition: opacity 0.5s;
 }
+
+.explore-favorite {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("images/hollow-star.png");
+  right:150px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.explore-favorite-yes {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("images/filled-star.png");
+  right:150px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.favorited-count {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  right:120px;
+  top:15px;
+  color:white;
+}
+
+.explore-comment {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("images/comment.png");
+  right:75px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.explore-curate {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("images/curate.png");
+  right:5px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+
+
+
 
 /* UPLOAD */
 .upload-button {
@@ -270,4 +356,10 @@ body.modal-open {
 /* PRINTS */
 .prints-link {
   display:contents;
+}
+
+/* INFINITE SCROLL */
+.infinite-scroll-text {
+  font-weight: bold;
+  text-align: center;
 }

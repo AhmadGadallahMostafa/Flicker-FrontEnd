@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
+import { formData } from 'form-data';
+const token = 123;
 
 const UploadButton = ( {setSelectedImage} ) => {
 
@@ -19,7 +21,9 @@ const UploadButton = ( {setSelectedImage} ) => {
 	}
 	
 	const toggleErrorMessage = () => {
-		if (isImage == null) return (<div>Upload an image to your photostream from here!</div>);
+		if (isImage == null) return (<div>Upload an image to your photostream from here!<br />
+			The image will be uploaded to your photostream as a <strong>private</strong> image.
+		</div>);
 		switch (isImage) {
 			case (true): 
 			{
@@ -37,15 +41,22 @@ const UploadButton = ( {setSelectedImage} ) => {
 
 	function fileUpload() {
 		if (uploadedFile == null || isImage == false) return;
+		var formData = new FormData();
+		formData.append("photo", uploadedFile);
+		// console.log(formData.get)
 		axios({
 			method: 'POST',
-			url: 'http://localhost:8000/images',
+			url: 'https://www.thealphaflickr.xyz/api/photos',
+			// url: 'http://localhost:8000/photos/', // Photo - Upload a Photo for a given user // TODO
 			data: {
+				token: token,
+				photo: formData,
 				title: (uploadedFile.name.slice(0, -4)),
-				url: URL.createObjectURL(uploadedFile),
-				// author: username
+				// url: URL.createObjectURL(uploadedFile)//,
+				isPublic: false
 			},
 			onUploadProgress: (progressEvent) => {
+				console.log(uploadedFile);
 				const {loaded, total} = progressEvent;
 				let percent = Math.floor( (loaded *100 ) / total );
 				setLoadingProgress(percent);
