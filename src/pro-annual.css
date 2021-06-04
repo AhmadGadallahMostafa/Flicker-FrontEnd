@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+.pro_annualmain{
+    overflow-x: hidden;
+}
+
+.pro_annualmain2{
+    background-color: #f3f1f1;
+    overflow-x: hidden;
+}
+
+/****************************************left col**********************************************/
+.pro_annualleft{
+    padding-left: 30%;
+}
+.pro_annualleft2{
+    background-color: white;
+    border:1px solid rgb(206, 205, 205);
+    border-radius: 1%;
+}
+.pro_annuallefttitle{
+    font-size: 28px;
+    padding:5%;
+    padding-bottom: 0;
+}
+.pro_annuallefttitleb{
+    font-size: 28px;
+}
+.pro_annualplan{
+    display: inline;
+    padding-left: 5%;
+}
+.pro_annualplanprice{
+    display: inline;
+    padding-left: 50%;
+}
+.pro_annualtax{
+    display: inline;
+    padding-left: 5%;
+}
+.pro_annualtaxprice{
+    display: inline;
+    padding-left: 68.3%;
+}
+.pro_annualtotal{
+    display: inline;
+    font-weight: bold;
+    padding-left: 5%;
+}
+.pro_annualtotalprice{
+    display: inline;
+    padding-left: 63.5%;
+    font-weight: bold;
+}
+.pro_annualbutton{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    color:rgb(2, 134, 179) ;
+    font-size: 90%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+.pro_annualbutton:hover{
+    text-decoration: underline;
+}
+.pro_annualright2{
+    background-color: white;
+    border:1px solid rgb(206, 205, 205);
+    border-radius: 1%;
+    padding: 4%;
+}
+.pro_annualrighttitle{
+    padding:3% 0 3% 0;
+    font-size: 110%;
+}
+.pro_annualnametag{
+    display: block;
+    width: 100%;
+    border:1px solid red;
+}
+.pro_annualaddresstag{
+    display: block;
+    width: 100%;
+    border:1px solid red;
+
+}
+.pro_annualcitytag{
+    display: block;
+    width: 100%;
+    border:1px solid red;
+}
+.pro_annualpostaltag{
+    display: block;
+}
+.pro_annualcountry{
+    display: inline-block;
+}
+.pro_annualcity{
+    display:inline-block;
+}
+.form-control{
+    width: 90%;
+}
+.pro_annualpostaltag{
+    width:115%;
+    border: 1px solid red;
+}
+.pro_annualrightnames{
+    color: rgb(129, 128, 128);
+    font-size: 90%;
+}
+.pro_annualpaymenttitle{
+    padding:5% 0 5% 0;
+    font-size: 110%;
+}
+.pro_annualcard{
+    display: inline-block;
+}
+.pro_annualexp{
+    display: inline-block;
+}
+.pro_annualsec{
+    display: inline-block;
+}
+.pro_annualcardtag{
+    display:block;
+    width:90%;
+}
+.pro_annualexptag{
+    display:block;
+    width:90%;
+}
+.pro_annualsectag{
+    display:block;
+    width:90%;
+}
+.pro_annualterms{
+    padding: 5% 0;
+}
+.pro_annualcomplete{
+    padding-left: 70%;
+}
+.pro_annualcompletebutton{
+    outline:none;
+    border:none;
+    color: white;
+    font-weight: 600;
+    border-radius: 2%;
+    background-color: #128fdc;
+    padding: 4.5% 10%;
+}
+.pro_annualpromotitle{
+    color: rgb(129, 128, 128);
+    padding: 0 0 4% 5%;
+}
+.pro_annualpromotag{
+    border: 2px solid #128fdc;
+}
+.pro_annualpromo{
+    padding-left: 5%;
+}
+.pro_annualpromoclick{
+    padding: 5% 0 10% 5%;
+}
+.pro_annualpromobutton{
+    outline:none;
+    border:none;
+    color: white;
+    font-weight: 600;
+    border-radius: 2%;
+    background-color: #128fdc;
+    padding: 2.5% 5%;
+}
+/****************************************left col**********************************************/
+
+/****************************************left col Media Queries for mobile**********************************************/
+@media (max-width: 767.98px) {
+    .pro_annualleft{
+        padding-left: 10%;
+    }
+    .pro_annualright{
+        padding-left: 10%;
+    }
+    .pro_annualplanprice{
+        display: inline;
+        padding-left: 40%;
+    }
+    .pro_annualtaxprice{
+        display: inline;
+        padding-left: 60%;
+    }
+    .pro_annualtotalprice{
+        display: inline;
+        padding-left: 54.5%;
+        font-weight: bold;
+    }
+    .pro_annualcomplete{
+        padding-left: 15%;
+    }
+}
+/****************************************left col Media Queries for mobile**********************************************/
