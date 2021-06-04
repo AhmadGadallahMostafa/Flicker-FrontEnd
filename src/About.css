@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+
+/*------------------------------- base styles -------------------------------*/
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+} 
+/*------------------------------- base styles -------------------------------*/
+
+/*------------------------------- About-basic -------------------------------*/
+.about-content{
+  padding: 0 12.5%;
+}
+
+.row{
+  padding-right: 10%;
+}
+
+.right-col{
+  padding-left: 7% !important;
+  padding-right: 0;
+}
+
+
+.right-col p{
+  margin: 12px 0;
+}
+
+.h1-resising{
+  font-weight: bold;
+  color: #ff0084;
+  font-size: 24px; 
+  padding: 5% 0 0;
+  margin: 0 0 3%;
+  line-height: 29px;
+}
+
+.h2-resising{
+  font-size: 20px;
+  margin: 3% 0 2%;
+  line-height: 25px;
+}
+
+.h2-resising span{
+  font-size: 20px;
+  font-style: italic;
+}
+
+.list{
+  margin: 3% 10%;
+  padding: 0;
+}
+
+.h3-resising{
+  font-size: 16px;
+  margin: 0 0 1%;
+  line-height: 22px;
+}
+.h3-resising b{
+  font-size: 16px;
+}
+
+.Num{
+  color: #ff0084;
+}
+
+.Sign-up{
+  color: #0063dc;
+}
+
+.team-color{
+  color: #ff0084;
+}
+
+.left-col{
+  float: left;
+  width: 70%;
+  min-height: 80%;
+  max-height: 80%;
+  margin-top: 2%;
+  padding-right: 3%;
+  padding-left: 0;
+  border-right: 1px solid #dbdbdb;
+}
+
+.upper-list{
+  margin: 1% 4% 0 0;
+  font-size: 15.18px;
+  width: 80%;
+}
+
+.links{
+  padding: 1% 0;
+  margin: 0 !important;
+  font-size: 15.18px !important;
+  color: #0063dc;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 30.35px;
+}
+
+.links-2{
+  font-size: 15.18px !important;
+  border-bottom: none;
+  color: #0063dc;
+}
+
+.sign-up-pic{
+  margin: 3% 0 4%;
+  text-align: center !important;
+  left: 0;
+  color: #0063dc;
+}
+
+.sign-in-center{
+  text-align: center !important;
+  color: #0063dc;
+}
+
+.helptag{
+  font-size: 14px;
+}
+
+.helptag2{
+  font-size: 14px;
+}
+
+.last{
+  font-size: 14px;
+  color: #0063dc;
+}
+
+/*------------------------------- About-basic -------------------------------*/
+
+/*------------------------------- About-Styling -------------------------------*/
+.blue-white:hover{
+  color: white;
+  background-color: #0063dc;
+  text-decoration: none;
+}
+.images-styling:hover{
+  outline: #0063dc solid 3px;
+}
+/*------------------------------- About-Styling -------------------------------*/
+
+
+
+/* .h5 {
+  font-size: 5rem !important;
+} */
+
+/* .about-content {
+  padding: 0 10rem;
+} */
+
+/* TABLET MODE */
+/* @media (max-width: 991.98px) {
+  .about-content {
+    padding: 0 5rem;
+  }
+} */
+
+/* MOBILE MODE */
+/* @media (max-width: 767.98px) {
+  .about-content {
+    padding: 0 2rem;
+  }
+} */
+
