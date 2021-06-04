@@ -4,7 +4,7 @@ body {
 }
 
 .prints-image-area {
-    background-image: url("./images/prints-page-main.jpg");
+    background-image: url("https://combo.staticflickr.com/ap/build/images/prints/prints-page-hero.jpg");
 
     justify-content: center;
     background-size: cover;
