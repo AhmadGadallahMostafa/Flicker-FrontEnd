@@ -1,3 +1,4 @@
+import './index.css';
 import React, { useEffect, useState } from 'react';
 import ExploreImages from './ExploreImages';
 import { Link } from 'react-router-dom';

@@ -1,3 +1,4 @@
+import './index.css';
 import { useState } from "react";
 
 const GalleryImages = ({ galleryImages, setSelectedImage }) => {
@@ -34,4 +35,4 @@ const GalleryImages = ({ galleryImages, setSelectedImage }) => {
 	);
 }
 
-export default GalleryImages
+export default GalleryImages;

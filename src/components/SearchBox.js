@@ -1,3 +1,4 @@
+import './index.css';
 const SearchBox = (props) => {
 
 	return (

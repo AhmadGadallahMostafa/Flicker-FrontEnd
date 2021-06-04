@@ -1,3 +1,4 @@
+import './index.css';
 const Albums = ({ albums, galleryImages }) => {
 
 	const getSrc = (id) => {
@@ -30,4 +31,4 @@ const Albums = ({ albums, galleryImages }) => {
 	);
 }
 
-export default Albums
+export default Albums;

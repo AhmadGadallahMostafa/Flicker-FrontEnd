@@ -1,3 +1,4 @@
+import './index.css';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
@@ -147,4 +148,4 @@ const ExploreImages = ({ exploreImages }) => {
 	);
 }
 
-export default ExploreImages
+export default ExploreImages;

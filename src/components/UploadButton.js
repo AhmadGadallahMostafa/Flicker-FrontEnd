@@ -1,7 +1,8 @@
+import './index.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { formData } from 'form-data';
-const token = 123;
+const token = 123; // placeholder
 
 const UploadButton = ( {setSelectedImage} ) => {
 
@@ -83,4 +84,4 @@ const UploadButton = ( {setSelectedImage} ) => {
 	);
 }
 
-export default UploadButton
+export default UploadButton;
