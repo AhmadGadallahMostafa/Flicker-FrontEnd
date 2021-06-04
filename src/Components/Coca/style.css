@@ -1,0 +1,48 @@
+.image {
+    position: relative;
+    width: 400px;
+}
+.img-grid{
+    object-fit: cover;
+    display: block;
+    width: 100%;
+  }
+  .image_over{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .image_over > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+  }
+  
+  .image_over:hover {
+    opacity: 1;
+  }
+  
+  .image_over:hover > * {
+    transform: translateY(0);
+  }
+  
+  .author_name {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .img_likes {
+    z-index: 12;
+    font-size: 1.25em;
+    margin-top: 0.25em;
+  }
