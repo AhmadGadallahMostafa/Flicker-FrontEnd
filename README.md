@@ -35,3 +35,38 @@ note: we are using npm as a package manager you are welcomed to use yarn just ch
 $ npm run json:server
 $ npm run dev
 ```
+# Some screenShots and gifs of the UX
+
+![search](https://user-images.githubusercontent.com/62334815/120799968-b4b05a80-c53f-11eb-8594-7227611cf9e5.gif)
+    
+---
+    
+![scroll-min](https://user-images.githubusercontent.com/62334815/120800508-533cbb80-c540-11eb-9c57-52fb79c56505.gif)
+    
+---
+    
+    
+ ![enlarge-min](https://user-images.githubusercontent.com/62334815/120801165-1cb37080-c541-11eb-8840-ca2d7c337637.gif)
+    
+    
+
+---
+    
+    
+    
+![carousel-min](https://user-images.githubusercontent.com/62334815/120803324-b845e080-c543-11eb-99f2-5e6f2e04463a.gif)
+    
+    
+    
+---
+    
+    
+![form](https://user-images.githubusercontent.com/62334815/120804028-779a9700-c544-11eb-8cf9-6289381675b4.JPG)
+
+    
+---
+    
+# Thank You Have a nice experience
+    
+
+
