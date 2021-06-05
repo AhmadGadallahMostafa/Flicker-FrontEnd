@@ -32,7 +32,7 @@ note: we are using npm as a package manager you are welcomed to use yarn just ch
 ```
 4- Run In dev 
 ```
-$ npm run json:server
+$ json-server --watch Data/db.json --port 8000
 $ npm run dev
 ```
 # Some screenShots and gifs of the UX
