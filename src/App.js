@@ -1,10 +1,10 @@
 import {BrowserRouter,Route,Switch} from 'react-router-dom';
-import About from './About';
-import Help from './Help'
-import Getpro from './Getpro';
-import Proannual from './pro-annual';
-import Promonth from './pro-monthly';
-import Pro3month from './pro-3month';
+import About from './components/AboutPage/About';
+import Help from './components/HelpPage/Help'
+import Getpro from './components/Pro/Getpro';
+import Proannual from './components/ProAnnual/pro-annual';
+import Promonth from './components/ProMonthly/pro-monthly';
+import Pro3month from './components/Pro3month/pro-3month';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GridText from './components/GridText';
 import PrintsButton from './components/PrintsButton';
