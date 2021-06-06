@@ -18,9 +18,9 @@ import Prologo from './images/probadge.png'
 
 
 import { useState } from 'react';
-import Getpronav from './Getpro-navbar';
-import './Getpro.css';
-import Footer from './Footer';
+import Getpronav from './components/ProNavbar/Getpro-navbar';
+import './components/Pro/Getpro.css';
+import Footer from './components/MinasFooter/Footer';
 
 const Getpro = () => {
     const [proplans,setproplans]=useState(0);
