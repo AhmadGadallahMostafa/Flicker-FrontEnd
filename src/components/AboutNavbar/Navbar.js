@@ -2,7 +2,7 @@ import nav_logo from './images/flickr_logo.svg';
 import cloud from './images/cloud.png'
 import search from './images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Navbar.css';
+import './components/AboutNavbar/Navbar.css';
 
 const Navbar = () => {
     return ( 
