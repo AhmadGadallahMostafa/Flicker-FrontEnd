@@ -1,9 +1,9 @@
 import Member from './images/Team_Member.jpg';
 import Account from './images/create-account-button.png';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import Navbar from './components/AboutPage/Navbar';
+import Footer from './components/AboutPage/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './About.css';
+import './components/AboutPage/About.css';
 
 const About = () => {
 
