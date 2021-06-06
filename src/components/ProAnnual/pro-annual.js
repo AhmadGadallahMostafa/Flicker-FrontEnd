@@ -1,6 +1,6 @@
 
-import './pro-annual.css'
-import Navbar from './Getpro-navbar'
+import './components/ProAnnual/pro-annual.css'
+import Navbar from './components/ProAnnual/Getpro-navbar'
 import { useState } from 'react';
 import axios from 'axios';
 
