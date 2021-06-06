@@ -1,23 +1,16 @@
 import React from "react";
 import {useHistory} from "react-router-dom"
 import {
-  Nav,
-  NavDropdown,
   Button,
-  Form,
-  Navbar,
-  FormControl,
+  Navbar
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.scss";
 
-function HomeNav() {
-  const history = useHistory();
-  const handleClick2 = () => history.push("/signup");
-  const handleClick1 = () => history.push("/login");
+function NullNav() {
   return (
     <div>
-      <Navbar fixed="top" bg="MyNav" expand="lg" variant="dark">
+      <Navbar  bg="dark" expand="lg" variant="dark">
         <Navbar.Brand className="logo" href="#home">
           <img
             style={{ marginRight: "10px" }}
@@ -35,21 +28,10 @@ function HomeNav() {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
-        <Nav className="ml-auto">
-        <Button
-          variant="info"
-          style={{ marginRight: "10px"}}
-          onClick={handleClick1}
-        >
-          Log In
-        </Button>
-        <Button variant="outline-light" onClick={handleClick2}>
-          Sign Up
-        </Button>
-        </Nav>
+
       </Navbar>
     </div>
   );
 }
 
-export default HomeNav;
+export default NullNav;

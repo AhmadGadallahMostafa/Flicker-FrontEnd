@@ -16,6 +16,8 @@ const List = () => {
     const [color, setColor] = useState('');
     const [page, setNewPage] = useState();
     const [zoom, setZoom] =useState(null);
+
+
     const fetchData = async (input,colorIn,pageNo) => {
         setLoading(true);
         const res = await axios.get(`https://api.unsplash.com/search/photos?page=${pageNo}&color=${!colorIn ? 'blue' : colorIn}&query=${!input ? 'beach' : input}&client_id=5LJhcXNOXBnO-XaSPP737TkCsajkgFZUxjtYqrMMT1Q&per_page=20`)

@@ -1,17 +1,29 @@
-import React from "react";
+import React,{useState} from "react";
 
 import {
-  Nav,
-  NavDropdown,
   Button,
-  Form,
   Navbar,
-  FormControl,
+  Alert,
+  Nav
 } from "react-bootstrap";
+import {Link , useHistory} from "react-router-dom";
+import { useAuth } from "../Authorization/AuthProvider"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.scss"
 
 function NavBar() {
+  const history = useHistory();
+  const { currentUser , logout} = useAuth();
+  const [error, setError] = useState("");
+  async function handleLoggingOut(){
+    setError("");
+    try{
+        await logout();
+        history.push("/home");
+    }catch{
+        setError("Faield to log out , Try Again");
+    }
+}
   return (
     <div>
       <Navbar  bg="dark" expand="lg" variant="dark">
@@ -32,11 +44,10 @@ function NavBar() {
             alt="React Bootstrap logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        </Navbar.Collapse>
-        <Button variant="info" style={{marginRight : '10px'}}>Log In</Button>
-        <Button variant="outline-light">Sign Up</Button>
+        {error && <Alert variant="danger">{error}</Alert>}
+        <Nav className="ml-auto">
+        <Button variant="info" style={{marginRight : '10px'}} onClick={handleLoggingOut}>Log Out</Button>
+        </Nav>
       </Navbar>
     </div>
   );

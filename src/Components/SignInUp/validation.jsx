@@ -1,4 +1,4 @@
- function validateInfo(values){
+ async function validateInfo(values){
   let errors ={}
   
 
