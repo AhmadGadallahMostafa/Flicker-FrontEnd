@@ -130,6 +130,7 @@ jobs:
           npm run build
           if [ $? -eq 0 ]
           then
+            sudo rm -rf /var/www/thealphaflickr.xyz/
             sudo mkdir -p /var/www/thealphaflickr.xyz/
             sudo chown -R $USER:$USER /var/www/thealphaflickr.xyz/
             sudo cp -r build/* /var/www/thealphaflickr.xyz/
@@ -142,3 +143,7 @@ jobs:
       # Task[5]: Excute AfterDeploy.sh
       - name: Set Production enviroment for FrontEnd Code
         run: cat ~/AfterDeploy.sh | ssh staging
+      
+      # Task[6]: report Failure
+        run: |
+        echo $?
