@@ -6,7 +6,7 @@ import search from '../../images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Help.css';
 import { useState } from 'react';
-import { DropdownButton } from 'react-bootstrap';
+// import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 import Footer from './../MinasFooter/Footer';
 
@@ -32,7 +32,7 @@ const Help = () => {
                     <a href="flickr-help">
                         <img src={flickrhelp} width='106.57' height='22.85' className="flickr-help-logo" alt=""/>
                     </a>
-                    <span href="" className="button1 wbutton">
+                    <span href="/#" className="button1 wbutton">
                         <Dropdown >
                             <Dropdown.Toggle style={{backgroundColor:"transparent",borderColor:"transparent"}}>
                                 All Topics
@@ -55,10 +55,10 @@ const Help = () => {
                             </Dropdown.Menu>
                         </Dropdown>
                     </span>
-                    <a href="" className="button2 wbutton">Status</a>
+                    <a href="/#" className="button2 wbutton">Status</a>
                     <img src={twitter}  className="button3 wbutton" alt=""/>
-                    <a href="" className="button4 wbutton">Follow @FlickrHelp</a>
-                    <a href="" className="button5 wbutton">flickr.com</a>
+                    <a href="/#" className="button4 wbutton">Follow @FlickrHelp</a>
+                    <a href="/#" className="button5 wbutton">flickr.com</a>
                 </div>
                 <div className="search">
                     <span className="help-center">Help Center</span>
@@ -68,7 +68,7 @@ const Help = () => {
                         <input type="text" className="search-bar" placeholder="Find Answers"/>
                     </div>
                 </div>
-                <a href="" className="image-credits">Image by Paul Cox</a>
+                <a href="/#" className="image-credits">Image by Paul Cox</a>
             </div>
             <div className="home1">
 
@@ -85,31 +85,31 @@ const Help = () => {
                     </div>
 
                     {/* **********************Popular Boxes**************************/}
-                    <a className="article1">
+                    <a href="/#" className="article1">
                         <div className="article-text article1-text">
                             Logging in to Your Flickr Account
                         </div>
                         <img src={arrow} className="arrow" alt=""/>
                     </a>
-                    <a className="article1">
+                    <a href="/#" className="article1">
                         <div className="article-text article2-text">
                             Change Your Flickr Contact Email Address
                         </div>
                         <img src={arrow} className="arrow" alt=""/>
                     </a>
-                    <a className="article1">
+                    <a href="/#" className="article1">
                         <div className="article-text article3-text">
                             FAQ for Flickr members about our payment processor migration
                         </div>
                         <img src={arrow} className="arrow" alt=""/>
                     </a>
-                    <a className="article1">
+                    <a href="/#" className="article1">
                         <div className="article-text article4-text">
                             Get Flickr notifications by email and in your account
                         </div>
                         <img src={arrow} className="arrow" alt=""/>
                     </a>
-                    <a className="article1">
+                    <a href="/#" className="article1">
                         <div className="article-text article5-text">
                             Pricing FAQ
                         </div>
@@ -265,7 +265,7 @@ const Help = () => {
                         <div className="col-md-9 col-12 order-2 topics-right">
                             {   leftcoltopics===0?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -280,7 +280,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -295,7 +295,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -310,7 +310,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -325,7 +325,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -343,7 +343,7 @@ const Help = () => {
                                 </div>
                                 : leftcoltopics === 1?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -358,7 +358,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -373,7 +373,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -388,7 +388,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -403,7 +403,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -421,7 +421,7 @@ const Help = () => {
                             </div>
                                 : leftcoltopics === 2? 
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -436,7 +436,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -451,7 +451,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -466,7 +466,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -481,7 +481,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -499,7 +499,7 @@ const Help = () => {
                                 </div>
                                 :leftcoltopics === 3?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -514,7 +514,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -529,7 +529,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -544,7 +544,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -559,7 +559,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -575,9 +575,9 @@ const Help = () => {
                                     </div>
                                 </a>
                             </div>
-                                :leftcoltopics == 4?
+                                :leftcoltopics === 4?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -592,7 +592,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -607,7 +607,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -622,7 +622,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -637,7 +637,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -655,7 +655,7 @@ const Help = () => {
                                 </div>
                                 :leftcoltopics === 5?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -670,7 +670,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -685,7 +685,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -700,7 +700,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -715,7 +715,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -733,7 +733,7 @@ const Help = () => {
                             </div>
                                 :leftcoltopics === 6?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -748,7 +748,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -763,7 +763,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -778,7 +778,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -793,7 +793,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -811,7 +811,7 @@ const Help = () => {
                                 </div>
                                 :leftcoltopics === 7?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -826,7 +826,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -841,7 +841,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -856,7 +856,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -871,7 +871,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -889,7 +889,7 @@ const Help = () => {
                             </div>
                                 :leftcoltopics === 8?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -904,7 +904,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -919,7 +919,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -934,7 +934,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -949,7 +949,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -967,7 +967,7 @@ const Help = () => {
                                 </div>
                                 :leftcoltopics === 9?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -982,7 +982,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -997,7 +997,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -1012,7 +1012,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -1027,7 +1027,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -1045,7 +1045,7 @@ const Help = () => {
                             </div>
                                 :leftcoltopics === 10?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -1060,7 +1060,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -1075,7 +1075,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -1090,7 +1090,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -1105,7 +1105,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
@@ -1123,7 +1123,7 @@ const Help = () => {
                                 </div>
                                 :leftcoltopics === 11?
                                 <div className="account-access-topics">
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic1-title-text">
@@ -1138,7 +1138,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic2-title-text">
@@ -1153,7 +1153,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic3-title-text">
@@ -1168,7 +1168,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic4-title-text">
@@ -1183,7 +1183,7 @@ const Help = () => {
                                         </div>
                                     </div>
                                 </a>
-                                <a href="" className="topics-link">
+                                <a href="/#" className="topics-link">
                                     <div className="topic1">
                                         <div className="topic1-title">
                                             <div className="account-access-topic5-title-text">
@@ -1201,7 +1201,7 @@ const Help = () => {
                             </div>
                                 :leftcoltopics === 12?
                                 <div className="get-started-topics">
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic1-title-text">
@@ -1216,7 +1216,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic2-title-text">
@@ -1231,7 +1231,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic3-title-text">
@@ -1246,7 +1246,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic4-title-text">
@@ -1261,7 +1261,7 @@ const Help = () => {
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="" className="topics-link">
+                                    <a href="/#" className="topics-link">
                                         <div className="topic1">
                                             <div className="topic1-title">
                                                 <div className="get-started-topic5-title-text">
