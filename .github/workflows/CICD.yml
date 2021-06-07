@@ -71,7 +71,7 @@ jobs:
         run: ~/Testing.sh
   
   # Second Job
-  Build and Deploy:
+  BuildDeploy:
     name: Build App then ssh & Deploy
     # The Runner would run on the latest version of ubuntu server
     runs-on: ubuntu-latest
