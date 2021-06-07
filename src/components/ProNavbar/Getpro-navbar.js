@@ -1,6 +1,6 @@
-import nav_logo from './images/flickr_logo.svg';
+import nav_logo from '../../images/flickr_logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import profile from './images/buddyicon.png'
+import profile from '../../images/buddyicon.png'
 import './components/ProMonthly/Getpro-navbar.css';
 
 /**
