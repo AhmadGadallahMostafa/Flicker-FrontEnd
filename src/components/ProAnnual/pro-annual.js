@@ -378,7 +378,7 @@ const Pro_annual = () => {
                                     </div>
                                     <div className="pro_annualterms">
                                         By clicking Complete Purchase you agree to Flickr’s
-                                        <a href=""> privacy policy</a> and <a href="">terms and conditions of use </a> 
+                                        <a href="/#"> privacy policy</a> and <a href="/#">terms and conditions of use </a> 
                                         and acknowledge and agree that this purchase is non-refundable.
                                     </div>
                                     <div className="pro_annualcomplete">
