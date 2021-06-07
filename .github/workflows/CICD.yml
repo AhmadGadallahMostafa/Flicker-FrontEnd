@@ -12,7 +12,7 @@ on:
     branches: [ main ]
 
 jobs:
-  # This workflow contains a Two jobs called "Testing - BuildDeploy"
+  # This workflow contains Two jobs called "Testing - BuildDeploy"
 
 
   # First Job
