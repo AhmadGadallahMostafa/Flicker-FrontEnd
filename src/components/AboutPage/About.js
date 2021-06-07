@@ -25,22 +25,22 @@ const About = () => {
             <div className="row">
                 <div className="col-3 left-col">
                     <div className="upper-list">
-                        <p className="links"><a href="" className="links-2 blue-white">Take the tour</a></p>
-                        <p className="links"><a href="" className="links-2 blue-white">Flickr blog</a></p>
-                        <p className="links"><a href="" className="links-2 blue-white">Community guidelines</a></p>
-                        <p className="links"><a href="" className="links-2 blue-white">Jobs</a></p>
+                        <p className="links"><a href="/#" className="links-2 blue-white">Take the tour</a></p>
+                        <p className="links"><a href="/#" className="links-2 blue-white">Flickr blog</a></p>
+                        <p className="links"><a href="/#" className="links-2 blue-white">Community guidelines</a></p>
+                        <p className="links"><a href="/#" className="links-2 blue-white">Jobs</a></p>
                     </div>
                     <p className="sign-up-pic">
-                        <a href="">
+                        <a href="/#">
                             <img src={Account} width="100%" height="100%"alt=""/>
                         </a>
-                        <a href="" className="sign-in-center blue-white">or Sign In</a>
+                        <a href="/#" className="sign-in-center blue-white">or Sign In</a>
                     </p>
                     <h3 className="helptag"><b className="helptag2">Need help?</b></h3>
                     <p className="last">
-                        <a href="" className="last blue-white">Visit our FAQ</a>
+                        <a href="/#" className="last blue-white">Visit our FAQ</a>
                         <br/>
-                        <a href="" className="last blue-white">Get help by email</a>
+                        <a href="/#" className="last blue-white">Get help by email</a>
                     </p>
                 </div>
                 <div className="col-9 right-col">
@@ -89,86 +89,48 @@ const About = () => {
                     </div>
                     <p>Flickr continues to evolve in myriad ways, all of which are
                          designed to make it easier and better. Check out 
-                         the <a href="" className="blue-white">Flickr Blog</a> to stay apprised of the latest developments. The fact that 
+                         the <a href="/#" className="blue-white">Flickr Blog</a> to stay apprised of the latest developments. The fact that 
                          you've read to the end of this entire document and are hanging out 
                          at the bottom of this page with nothing but this silly text to keep 
                          you company is proof of a deep and abiding interest on your part. 
-                         What are you waiting for? <a href=""><b className="Sign-up blue-white">Sign up now!</b></a></p>  
+                         What are you waiting for? <a href="/#"><b className="Sign-up blue-white">Sign up now!</b></a></p>  
                     <h2 className="h2-resising team-color">The Team</h2>
 
                     <table width="100%">
                         <tbody>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -176,75 +138,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -252,75 +176,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -328,75 +214,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -404,75 +252,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -480,75 +290,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -556,75 +328,37 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                            </tr>
-                            <tr valign = "top">
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
-                                    <br/>
-                                    <small>Ahmed</small>
-                                    <br/><br/>
-                                </td>
-                                <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
@@ -632,25 +366,291 @@ const About = () => {
                             </tr>
                             <tr valign = "top">
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
                                 </td>
                                 <td width="16.666%" align="center">
-                                    <a href="" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                            </tr>
+                            <tr valign = "top">
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
+                                    <br/>
+                                    <small>Ahmed</small>
+                                    <br/><br/>
+                                </td>
+                                <td width="16.666%" align="center">
+                                    <a href="/#" className="images-styling"><img src={Member} width='75' height='75' alt=""/></a>
                                     <br/>
                                     <small>Ahmed</small>
                                     <br/><br/>
