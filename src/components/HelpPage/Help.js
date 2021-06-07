@@ -8,7 +8,7 @@ import './Help.css';
 import { useState } from 'react';
 import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
-import Footer from '../../MinasFooter/Footer';
+import Footer from './../MinasFooter/Footer';
 
 /**
  * Component for Help Page
