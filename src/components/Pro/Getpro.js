@@ -22,6 +22,15 @@ import Getpronav from './components/ProNavbar/Getpro-navbar';
 import './components/Pro/Getpro.css';
 import Footer from './components/MinasFooter/Footer';
 
+/**
+ * Component for GetPro page, the whole page containing the bundles and everything
+ *
+ * @component
+ * @example
+ * return (
+ *   <Getpro/>
+ * )
+ */
 const Getpro = () => {
     const [proplans,setproplans]=useState(0);
 
