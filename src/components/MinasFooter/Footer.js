@@ -1,8 +1,8 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+// import Dropdown from 'react-bootstrap/Dropdown';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
+// import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import './Footer.css'
 
 
@@ -32,9 +32,9 @@ function Footer() {
                 <div className="dropup">
                     <button className="dropbtn">English  <i class="fas fa-chevron-up fa-sm"></i></button>
                     <div class="dropup-content">
-                        <a href="#">Deutsch</a>
-                        <a href="#">Espanol</a>
-                        <a href="#">Francais</a>
+                        <a href="/#">Deutsch</a>
+                        <a href="/#">Espanol</a>
+                        <a href="/#">Francais</a>
                     </div>
                 </div>    
                 <hr className="solid" />
