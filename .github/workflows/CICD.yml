@@ -145,5 +145,5 @@ jobs:
         run: cat ~/AfterDeploy.sh | ssh staging
       
       # Task[6]: report Failure
-        run: |
-        echo $?
+      - name: Print status code of last command
+        run: echo $?
