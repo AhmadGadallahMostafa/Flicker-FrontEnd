@@ -83,7 +83,7 @@ const Getpro = () => {
                         <div className="pro_topiccontentwording">
                             Enjoy a fully ad-free experience across all of Flickr. 
                             Visitors to your account will never see an ad on your photostream, 
-                            albums, profile, or any of your photos. <a href="">Learn more</a>.
+                            albums, profile, or any of your photos. <a href="/#">Learn more</a>.
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ const Getpro = () => {
                                 etc. You can link directly to a shopping cart, checkout page, or 
                                 pricing pages on other sites, and you can list prices for your images 
                                 in your Flickr photo descriptions. Learn more about
-                                <a href=""> commercial activity on Flickr.</a> 
+                                <a href="/#"> commercial activity on Flickr.</a> 
                             </div>
                         </div>
                         <div className="pro_faqcontent">
@@ -278,7 +278,7 @@ const Getpro = () => {
                                 More questions?
                             </div>
                             <div className="pro_faqcontentwording">
-                                Please visit the <a href="">Flickr Help Center</a> for more information
+                                Please visit the <a href="/#">Flickr Help Center</a> for more information
                                 or to connect with an agent.
                             </div>
                         </div>
@@ -291,7 +291,7 @@ const Getpro = () => {
                             <div className="pro_faqcontentwording">
                                 You can check your subscription status and change your
                                  Flickr Pro membership at any time in
-                                 <a href=""> Account Settings</a>. Your new subscription will 
+                                 <a href="/#"> Account Settings</a>. Your new subscription will 
                                  take effect once your current subscription ends.
                             </div>
                         </div>
@@ -304,7 +304,7 @@ const Getpro = () => {
                                 Your Flickr Pro benefits will remain active for the rest 
                                 of your billing cycle. Refunds and credits aren't issued 
                                 for partial billing periods. Learn more about
-                                <a href=""> billing and cancellations here.</a> 
+                                <a href="/#"> billing and cancellations here.</a> 
                             </div>
                         </div>
                     </div>
@@ -377,7 +377,7 @@ const Getpro = () => {
 
                     </div>
                     <div className="pro_planslastphrase">Each Flickr Pro subscription is 
-                    auto-renewing and non-refundable. <a className="pro_lasta" href="">Learn more.</a> </div>
+                    auto-renewing and non-refundable. <a className="pro_lasta" href="/#">Learn more.</a> </div>
                 </div>
 
             </div>
