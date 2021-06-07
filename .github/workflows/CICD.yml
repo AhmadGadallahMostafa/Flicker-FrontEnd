@@ -124,13 +124,19 @@ jobs:
       - name: Prepare script to Set Production enviroment for FrontEnd Code
         run: |
           cat >>~/AfterDeploy.sh<<EOF
+          #!/bin/bash
           cd ~/FrontEnd/
           npm install
           npm run build
-          sudo mkdir -p /var/www/thealphaflickr.xyz/
-          sudo chown -R $USER:$USER /var/www/thealphaflickr.xyz/
-          sudo cp -r build/* /var/www/thealphaflickr.xyz/
-          sudo systemctl restart nginx
+          if [ $? -eq 0 ]
+          then
+            sudo mkdir -p /var/www/thealphaflickr.xyz/
+            sudo chown -R $USER:$USER /var/www/thealphaflickr.xyz/
+            sudo cp -r build/* /var/www/thealphaflickr.xyz/
+            sudo systemctl restart nginx
+          else
+            exit 1
+          fi
           EOF
       
       # Task[5]: Excute AfterDeploy.sh
