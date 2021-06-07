@@ -2,11 +2,8 @@ import React from "react";
 import {useHistory} from "react-router-dom"
 import {
   Nav,
-  NavDropdown,
   Button,
-  Form,
-  Navbar,
-  FormControl,
+  Navbar
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.scss";

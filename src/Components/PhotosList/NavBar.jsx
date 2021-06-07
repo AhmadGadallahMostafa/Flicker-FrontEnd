@@ -6,7 +6,7 @@ import {
   Alert,
   Nav
 } from "react-bootstrap";
-import {Link , useHistory} from "react-router-dom";
+import { useHistory} from "react-router-dom";
 import { useAuth } from "../Authorization/AuthProvider"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.scss"

@@ -15,7 +15,7 @@ const Gallery = ({ images, setZoom }) => {
                 className="img-grid"
                 src={img.urls.regular}
                 key={img.id}
-                alt="photo"
+                alt="from api data"
               />
             <div className="image_over" onClick={() => setZoom(img.urls.regular)}>
               <div className="author_name">by: {img.user.first_name}</div>

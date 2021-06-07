@@ -1,7 +1,5 @@
 import React from "react";
-import {useHistory} from "react-router-dom"
 import {
-  Button,
   Navbar
 } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

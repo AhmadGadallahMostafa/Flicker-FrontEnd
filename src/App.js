@@ -2,7 +2,6 @@ import "./App.scss";
 import List from "./Components/PhotosList/List";
 import SignUp from "./Components/SignInUp/SignUp"
 import Login from "./Components/SignInUp/Login"
-import { Container } from "react-bootstrap";
 import { AuthProvider } from "./Components/Authorization/AuthProvider";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./Components/Authorization/PrivateRoute";

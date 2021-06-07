@@ -10,7 +10,7 @@ const ImageList =({images}) =>{
           <img
             className="d-block w-100 carouselImage"
             src={image.url}
-            alt="slide Image"
+            alt="slider"
           />
           <Carousel.Caption>
             <h4>{image.author}</h4>

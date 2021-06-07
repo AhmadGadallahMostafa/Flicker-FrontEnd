@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {useHistory} from "react-router-dom"
-import { Carousel, Button } from "react-bootstrap";
+import {  Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ImageList from "./ImageList";
 import "./style.scss";
