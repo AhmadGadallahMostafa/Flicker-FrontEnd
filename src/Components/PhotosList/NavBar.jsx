@@ -15,6 +15,7 @@ function NavBar() {
   const history = useHistory();
   const { currentUser , logout} = useAuth();
   const [error, setError] = useState("");
+  const handlePro = () => history.push("/account/upgrade/pro");
   async function handleLoggingOut(){
     setError("");
     try{
@@ -47,6 +48,7 @@ function NavBar() {
         {error && <Alert variant="danger">{error}</Alert>}
         <Nav className="ml-auto">
         <Button variant="info" style={{marginRight : '10px'}} onClick={handleLoggingOut}>Log Out</Button>
+        <Button variant="info" style={{marginRight : '10px'}} onClick={handlePro}>Become Pro member</Button>
         </Nav>
       </Navbar>
     </div>

@@ -1,0 +1,146 @@
+# This is a basic CI/CD Pipline for FrontEnd repository
+# by: Ziad Mansour Mohamed
+
+name: CI/CD PipLine FrontEnd
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  # This workflow contains Two jobs called "Testing - BuildDeploy"
+
+
+  # First Job
+  Testing:
+    name: "Run Tests on code"
+    # The Runner would run on the latest version of ubuntu server
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Task[1]: Get Clone Key on the Runner
+      - name: Prepare the Clone Key on the runner && clone
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "$SSH_Clone_KEY" > ~/.ssh/Clone.key
+          chmod 600 ~/.ssh/Clone.key
+          sudo cat >>~/.ssh/config <<END
+            Host FrontEndRepo
+            Hostname github.com
+            User git
+            IdentityFile ~/.ssh/Clone.key
+          END
+          git clone FrontEndRepo:AhmadGadallahMostafa/Flicker-FrontEnd.git ~/FrontEnd
+        env:
+          SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
+
+      # Task[2]: create bach scripts to ease Setting the Enviroment
+      - name: Creat SetEnviroment.sh scripts
+        run: |
+          cat >>~/SetEnviroment.sh<<END
+          #!/bin/bash
+          sudo apt install python3 
+          python3 ––version
+          sudo apt install python3-pip
+          pip --version
+          sudo pip install -r ~/FrontEnd/Testing/requirements.txt
+          whereis chromedriver
+          END
+          chmod +x ~/SetEnviroment.sh
+      
+      # Task[3]: Run SetEnviroment script
+      - name: Run SetEnviroment.sh scripts
+        run: ~/SetEnviroment.sh
+
+      # Task[4]: create bach scripts to ease Testing
+      - name: Creat Testing.sh scripts
+        run: |
+          cat >>~/Testing.sh<<END
+          #!/bin/bash
+          python3 ~/FrontEnd/Testing/TestSuite.py 
+          END
+          chmod +x ~/Testing.sh
+      
+      # Task[5]: Run testing scripts Scripts
+      - name: Run Testing.sh scripts
+        run: ~/Testing.sh
+  
+  # Second Job
+  BuildDeploy:
+    name: Build App then ssh & Deploy
+    # The Runner would run on the latest version of ubuntu server
+    runs-on: ubuntu-latest
+    needs: Testing
+    
+    steps:
+      # Task[1]: Get Clone Key on the Runner
+      - name: Prepare the Clone Key on the runner && clone
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "$SSH_Clone_KEY" > ~/.ssh/Clone.key
+          chmod 600 ~/.ssh/Clone.key
+          sudo cat >>~/.ssh/config <<END
+            Host FrontEndRepo
+            Hostname github.com
+            User git
+            IdentityFile ~/.ssh/Clone.key
+          END
+          git clone FrontEndRepo:AhmadGadallahMostafa/Flicker-FrontEnd.git ~/FrontEnd
+        env:
+          SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
+      
+      # Task [2]: Build
+      - name: Build App
+        run: |
+          cd ~/FrontEnd/
+          npm install
+          npm run build
+        
+      # Task[3]: create the SSH config file to ease the Accessing the server later
+      - name: Creat SSh Config file
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+      
+      # Task[4]: Creat Deploy.sh script to prepare FrontEnd code for production
+      - name: Prepare script to Set Production enviroment for FrontEnd Code
+        run: |
+          cat >>~/Deploy.sh<<EOF
+          #!/bin/bash
+          sudo rm -rf /var/www/thealphaflickr.xyz/
+          sudo mkdir -p /var/www/thealphaflickr.xyz/
+          sudo chmod -R 777 /var/www/thealphaflickr.xyz/
+          EOF
+      
+      # Task[5]: Excute AfterDeploy.sh
+      - name: Set Production enviroment for FrontEnd Code
+        run: cat ~/Deploy.sh | ssh staging
+      
+      # Task[6]: Upload Build from runner to server
+      - name: Upload Build
+        run: scp -rp -i "~/.ssh/staging.key" ~/FrontEnd/build/* $SSH_USER@$SSH_HOST:/var/www/thealphaflickr.xyz
+        env:
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+
+      # Task[7]: Restart Nginx To catch edits
+      - name: Restart Nginx
+        run: sudo systemctl restart nginx | ssh staging
