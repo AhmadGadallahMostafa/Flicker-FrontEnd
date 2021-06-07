@@ -142,9 +142,8 @@ jobs:
       
       # Task[5]: Excute AfterDeploy.sh
       - name: Set Production enviroment for FrontEnd Code
-        run: cat ~/AfterDeploy.sh && echo "Exited with '$?'" | ssh staging
+        run: cat ~/AfterDeploy.sh | ssh staging
       
       # Task[6]: report Failure
       - name: The job has failed
-        if: ${{ failure() }}
-        run: exit 1
+        run: echo $?
