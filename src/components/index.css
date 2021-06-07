@@ -1,10 +1,9 @@
 body {
   font-family: "Proxima Nova","helvetica neue",helvetica,arial,sans-serif;
-  
 }
 
 .prints-image-area {
-    background-image: url("./../images/prints-page-hero.jpg");
+    background-image: url("https://combo.staticflickr.com/ap/build/images/prints/prints-page-hero.jpg");
 
     justify-content: center;
     background-size: cover;
@@ -170,7 +169,7 @@ body.modal-open {
 }
 
 .close-button {
-  background-image: url("./../images/close-button.png");
+  background-image: url("../images/close-button.png");
   background-repeat: no-repeat;
   background-size: 30px 30px;
   width:30px;
@@ -186,13 +185,6 @@ body.modal-open {
 .spacing {
   width:30px;
 }
-
-
-
-
-
-
-
 
 
 
@@ -288,7 +280,7 @@ body.modal-open {
   width: 25px;
   height: 25px;
   z-index: 2;
-  background-image: url("./../images/hollow-star.png");
+  background-image: url("../images/hollow-star.png");
   right:150px;
   top:15px;
   background-size: cover;
@@ -301,7 +293,7 @@ body.modal-open {
   width: 25px;
   height: 25px;
   z-index: 2;
-  background-image: url("./../images/filled-star.png");
+  background-image: url("../images/filled-star.png");
   right:150px;
   top:15px;
   background-size: cover;
@@ -324,7 +316,7 @@ body.modal-open {
   width: 25px;
   height: 25px;
   z-index: 2;
-  background-image: url("./../images/comment.png");
+  background-image: url("../images/comment.png");
   right:75px;
   top:15px;
   background-size: cover;
@@ -336,16 +328,12 @@ body.modal-open {
   width: 25px;
   height: 25px;
   z-index: 2;
-  background-image: url("./../images/curate.png");
+  background-image: url("../images/curate.png");
   right:5px;
   top:15px;
   background-size: cover;
   filter: invert(100%);
 }
-
-
-
-
 
 /* UPLOAD */
 .upload-button {
