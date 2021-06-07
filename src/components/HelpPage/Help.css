@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+/*------------------------------- base styles -------------------------------*/
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+  } 
+  /*------------------------------- base styles -------------------------------*/
+
+  .Home{
+    overflow-x: hidden;
+  }
+
+  #help-page .opacity-img{
+    filter: brightness(50%);
+  }
+  /*------------------------------- Navbar -------------------------------*/
+  #help-page .top{
+    position:absolute;
+    margin : 0;
+    padding : 0 18.3%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8.6%;
+    z-index: 1;
+  }
+
+  #help-page .flickr-help-logo{
+    margin: 2% 2%;
+  }
+
+  #help-page .all-topics{
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 0 4%;
+  }
+  
+  #help-page .wbutton{
+      color: white;
+      font-size: 14.5px;
+      font-weight:600;
+  }
+
+  #help-page .button1{
+      position: absolute;
+      left:29%;
+      margin: 0.7% 0;
+  }
+  #help-page .button2{
+    position: absolute;
+    left:37.4%;
+    margin: 1.35% 0;
+  }
+  #help-page .button3{
+        position: absolute;
+        left:60%;
+        margin: 1.6% 0;
+    }
+    #help-page .button4{
+        position: absolute;
+        left: 62.2%;
+        margin: 1.35% 0;
+    }
+    #help-page .button5{
+        position: absolute;
+        left:75.8%;
+        margin: 1.35% 0;
+    }
+    /*------------------------------- Navbar -------------------------------*/
+
+    #help-page .search{
+        position:absolute;
+        top: 37%;
+        left: 35%;
+       
+    }
+   
+    #help-page .help-center{
+        font-size: 35px;
+        color: white;
+        padding-left: 25%;
+    }
+    #help-page .search-bar{
+        padding-left: 2%;
+        width :350px;
+        height: 42px;
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        border-style: none;
+        outline: none;
+    }
+
+    #help-page .fill-searchbar{
+        padding-left: 10%;
+        background-color: white;
+        width :350px;
+        height: 42px;
+    }
+
+    #help-page .navbar-search-icon{
+        position: absolute;
+        top:67%;
+        right:83%;
+    }
+    
+
+    #help-page .image-credits{
+        position:absolute;
+        left:91%;
+        top:82%;
+        font-size:11px;
+        color: #d3d3d3;
+    }
+
+    #help-page .all-systems{
+        background-color: #f3f5f6;
+        padding: 1.4% 42.2%;
+    }
+
+    #help-page .circle{
+      width: 18px;
+      height: 18px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background:#2ecc71;
+      display:inline-block;
+    }
+
+    #help-page .all-sys-text{
+        display:inline-block;
+        font-size: 16px;
+        position:absolute;
+        right:42.3%;
+        bottom:5.5%;
+        
+    }
+    #help-page .popular{
+        margin: 0 9.55%;
+        padding: 3.57% 3%;
+    }
+
+    #help-page .popular-text{
+        padding:0 38% 0 38.8%;
+        margin: 0 0 3% 0;
+    }
+
+    #help-page .popular-text span{
+        font-size: 30px;
+        font-weight:lighter;
+    }
+  
+    #help-page .article1{
+        width: 48%;
+        padding: 3% 3%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        display: inline-block;
+        background-color: #f3f5f6;
+        color: black;
+        border: 1px solid #f3f5f6; 
+    }
+
+    #help-page .article1:hover{
+        border: 1px solid #006dac;
+        text-decoration: none;
+    }
+
+    #help-page .article-text{
+        display: inline;
+    }
+
+    #help-page .article1-text{
+        padding: 0 34% 0 0;
+        font-size: 16px;
+    }
+    #help-page .article2-text{
+        padding: 0 16% 0 0;
+        font-size: 16px;
+    }
+    #help-page .article3-text{
+        padding: 0 0% 0 0;
+        font-size: 13px;
+    }
+    #help-page .article4-text{
+        padding: 0 1% 0 0;
+        font-size: 16px;
+    }
+    #help-page .article5-text{
+        padding: 0 72% 0 0;
+        font-size: 16px;
+    }
+
+    #help-page .arrow{
+        display: inline;
+    }
+
+    #help-page .browse{
+        margin-top: 7%;
+        margin-bottom: 6%;
+    }
+    #help-page .browse-text{
+        font-size: 30px;
+        padding: 0 35.55% 0 35.55%;
+        font-weight: lighter;
+    }
+
+
+
+ /*------------------------------- Topics -------------------------------*/
+
+
+
+
+ #help-page .topics-structure{
+        padding-right: 0;
+    }
+
+    #help-page .topics-right{
+        padding-left: 4%;
+    }
+
+    #help-page .topic1{
+        width: 100%;
+        padding: 5.31%;
+        margin-bottom: 2%;
+        display: inline-block;
+        background-color: #f3f5f6;
+        color: black;
+        text-decoration: none;
+        border: 1px solid #f3f5f6;
+    }
+
+    #help-page .topic1:hover{
+        border: 1px solid #006dac;
+        text-decoration: none;
+    }
+
+    #help-page .topic1-title-text{
+        padding-right: 40%;
+        display: inline;
+    }
+
+    #help-page .topic1-content{
+        margin-top: 2.26%;
+    }
+
+    #help-page .left-title{
+        padding: 4% 0;
+        font-size: 26px;
+    }
+
+    #help-page .left-title-text{
+        display: inline;
+        color: #006dac;
+        font-size: 26px;
+        font-weight: 100;
+        border: none;
+        background-color: white;
+    }
+    #help-page .left-title:hover + .right-arrow{
+        display: inline;
+        color: #006dac;
+        font-size: 26px;
+    }
+    #help-page .right-arrow{
+        /* display: none !important; */
+        color: #006dac;
+        font-size: 26px;
+        display: inline;
+    }
+
+    
+  /*------------------------------- title padding -------------------------------*/
+  #help-page .get-started-topic1-title-text{
+    padding-right: 51%;
+    display: inline;
+  }
+
+  #help-page .get-started-topic2-title-text{
+    padding-right: 68%;
+    display: inline;
+  }
+  #help-page .get-started-topic3-title-text{
+    padding-right: 73.3%;
+    display: inline;
+  }
+  #help-page .get-started-topic4-title-text{
+    padding-right: 61.5%;
+    display: inline;
+  }
+  #help-page .get-started-topic5-title-text{
+    padding-right: 29.3%;
+    display: inline;
+  }
+
+
+  #help-page .account-access-topic1-title-text{
+    padding-right: 61%;
+    display: inline;
+  }
+
+  #help-page .account-access-topic2-title-text{
+    padding-right: 64%;
+    display: inline;
+  }
+  #help-page .account-access-topic3-title-text{
+    padding-right: 66%;
+    display: inline;
+  }
+  #help-page .account-access-topic4-title-text{
+    padding-right: 57.5%;
+    display: inline;
+  }
+  #help-page .account-access-topic5-title-text{
+    padding-right: 59.3%;
+    display: inline;
+  }
+
+  #help-page .more-articles-button{
+      text-decoration: none;
+      border-style: none;
+      outline: none;
+      background-color:#128fdc;
+      color: white;
+      Padding: 0.7% 2.5%;
+      border-radius: 3%;
+  }
+
+  #help-page .need-help-footer{
+      background-color: #404040;
+      padding: 2% 5% 2% 5%;
+  }
+
+  #help-page .need-help-text{
+    font-size: 25px;
+    color:white;
+    font-weight: 100;
+    padding: 0.5% 43% 0.5% 40%;
+}
+
+  #help-page .need-help-button-position{
+    padding: 0.5% 43% 0.5% 40%;
+  }
+
+  #help-page .need-help-button{
+      background-color: #404040;
+      border: 1px solid white;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 4% 20% 4% 20%;
+      border-radius: 5%;
+  }
+
+  #help-page .need-help-button:hover{
+      background-color: white;
+      color: #404040;
+  }
+
+  @media (max-width: 767.98px) {
+    .top{
+        padding: 0 !important;;
+    }
+    .flickr-help-logo{
+        width: 20% !important;;
+    }
+    .button1{
+        position: absolute !important;
+        left: 20% !important;
+        top: -3% !important;
+        margin: 0 !important;
+    }
+    .button2{
+        display: none !important;
+    }
+    .button3{
+        position: absolute !important;
+        left:57% !important;
+        top: 8% !important;
+        width: 5% !important;
+    }
+    .button4{
+        position: absolute !important;
+        left:62% !important;
+        top: 3% !important;
+    }
+    .button5{
+        display: none !important;
+    }
+    .image-credits{
+        position: absolute !important;
+        top:19% !important;
+        left:78% !important;
+        padding: 0 !important;
+        font-size: 50% !important;
+    }
+    .search{
+        position:absolute !important;
+        left:24% !important;
+        top: 8% !important;
+    }
+    .help-center{
+        font-size: 120% !important;
+    }
+    .fill-searchbar{
+        width:120% !important;
+        height: 50% !important;
+    }
+    .search-bar{
+        width:100% !important;
+        height: 50% !important;
+        font-size: 80% !important;
+    }
+    .circle{
+        position:absolute;
+        left:35%;
+        top: 24%;
+    }
+    .all-sys-text{
+        top:23%;
+        left: 43%;
+        right: 0;
+        font-size: 10px !important;
+        display: inline-block !important;
+    }
+    .all-systems{
+        background-color: #f3f5f6;
+        padding: 5% 0% !important;
+    }
+    .popular-text{
+        padding:0 8% 0 8.8% !important;
+        margin: 0 0 3% 0;
+        text-align: center;
+    }
+    .browse-text{
+        font-size: 30px;
+        padding: 0 15.55% 0 15.55% !important;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .need-help-text{
+        font-size: 25px;
+        color:white;
+        font-weight: 100;
+        padding: 0.5% 13% 0.5% 10% !important;
+        text-align: center;
+    }
+    .need-help-button-position{
+        padding: 0.5% 33% 0.5% 25% !important; 
+    }
+    
+    
+    
+  }

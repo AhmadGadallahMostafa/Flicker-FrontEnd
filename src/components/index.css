@@ -1,0 +1,365 @@
+body {
+  font-family: "Proxima Nova","helvetica neue",helvetica,arial,sans-serif;
+  
+}
+
+.prints-image-area {
+    background-image: url("./../images/prints-page-hero.jpg");
+
+    justify-content: center;
+    background-size: cover;
+    background-position: 0px -10vw;
+    height: 50vw;
+
+}
+
+.prints-image-area-text {
+  position: relative;
+  top: 15%;
+  left: 15%;
+  max-width: 30%;
+  font-size: 2vw;
+}
+
+.FAQ-image {
+  width: 100%;
+  height: auto;
+}
+
+.text-container-info {
+  padding-top: 3%;
+  padding-bottom: 3%
+}
+
+.text-container-row {
+  padding-top: 3%;
+  padding-bottom: 3%
+}
+
+body.modal-open {
+  overflow: hidden;
+  margin: auto
+}
+
+.footer-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  width:70%;
+}
+
+.footer-text-container {
+  width:100%;
+  padding:0px;
+  margin:0px;
+  display: inline;
+}
+
+.footer-button {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footer-button {
+  position: absolute;
+}
+
+.grid-container {
+  min-height: 40vw;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  justify-items: center;
+  grid-gap: 5px;
+  
+}
+
+.grid-item-text {
+  position: absolute;
+  z-index: 1;
+  bottom: 10%;
+  left: 5%;
+
+  color: white;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 4px black;
+  font-weight:500;
+}
+
+.grid-text {
+  opacity: 0%;
+  transition: opacity 0.5s;
+}
+
+.grid-item:hover .grid-text {
+  opacity: 100%;
+}
+
+.grid-item-subtext {
+  position: absolute;
+  z-index: 1;
+  bottom: 3%;
+  left: 5%;
+
+  color: lightgrey;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 3px black;
+  font-weight:500;
+  font-size:80%;
+}
+
+.grid-item-subtext:hover {
+  color: white; 
+}
+
+.grid-item {
+  position: relative;
+  display: grid;
+  cursor: pointer;
+}
+
+.grid-item-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.grid-item:hover::before {
+  opacity: 1;
+}
+.grid-item::before   {
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #000 150%);
+  margin-top:100px;
+  height: 100px;
+  width: 100%;
+  content: '';
+  z-index:0;
+  opacity:0;
+  transition: opacity 0.5s;
+}
+
+.grid-item .active {
+  border:2px solid rgb(80, 156, 255);
+  outline:2px solid rgb(80, 156, 255);
+}
+
+.prints-navbar-text {
+  color:darkblue;
+  transition: color 0.2s;
+  cursor: pointer;
+  padding:5px;
+  margin:5px;
+}
+.prints-navbar-text:hover {
+  color:lightblue;
+}
+
+.selected-tab {
+  border-bottom: 2px solid blue;
+}
+
+.close-button {
+  background-image: url("./../images/close-button.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width:30px;
+  height:30px;
+  opacity:0.7;
+  margin-left:10px;
+  cursor:pointer;
+  position:absolute;
+  right: 10px;
+  bottom: 15px;
+}
+
+.spacing {
+  width:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.explore-container {
+  padding-left:10%;
+  padding-right:10%;
+}
+
+.explore-images-container {
+  padding-top:1%;
+}
+
+.explore-image-gallery {
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  flex-wrap: wrap;
+  justify-items: center;
+  grid-gap: 5px;
+}
+
+.explore-grid-item-image {
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+/* EXPLORE TEXT */
+
+.explore-grid-item {
+  height:30vh;
+  flex-grow: 1;
+  /*background-color:black;*/
+}
+
+.explore-grid-item-text {
+  position:absolute;
+  
+  padding-left: 1vh;
+  padding-top: 1vh;
+
+  color: white;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: calc(100% - 200px);
+  white-space:nowrap; 
+  text-shadow: 0px 0px 4px black;
+  font-weight:500;
+}
+
+.explore-grid-item:hover .explore-grid-text {
+  opacity: 100%;
+}
+
+.explore-grid-item-subtext {
+  position: absolute;
+  padding-left: 1vh;
+  padding-top: 3vh;
+
+  color: lightgrey;
+  overflow:hidden; 
+  text-overflow: ellipsis;
+  width: 90%;
+  white-space:nowrap; 
+  text-shadow: 0px 0px 3px black;
+  font-weight:500;
+  font-size:80%;
+}
+
+.explore-grid-item-subtext:hover {
+  color: white; 
+}
+
+.explore-image-footer {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: auto;
+  height: 50px;
+  margin-top: 25px;
+  z-index: 5;
+  bottom: 8.3vh;
+  opacity: 0;
+}
+
+.explore-grid-item:hover .explore-image-footer {
+  opacity: 100%;
+  transition: opacity 0.5s;
+}
+
+.explore-favorite {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("./../images/hollow-star.png");
+  right:150px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.explore-favorite-yes {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("./../images/filled-star.png");
+  right:150px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.favorited-count {
+  cursor: pointer;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  right:120px;
+  top:15px;
+  color:white;
+}
+
+.explore-comment {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("./../images/comment.png");
+  right:75px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+.explore-curate {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  z-index: 2;
+  background-image: url("./../images/curate.png");
+  right:5px;
+  top:15px;
+  background-size: cover;
+  filter: invert(100%);
+}
+
+
+
+
+
+/* UPLOAD */
+.upload-button {
+  text-align: center;
+  margin-top: 1vw;
+}
+
+/* PRINTS */
+.prints-link {
+  display:contents;
+}
+
+/* INFINITE SCROLL */
+.infinite-scroll-text {
+  font-weight: bold;
+  text-align: center;
+}

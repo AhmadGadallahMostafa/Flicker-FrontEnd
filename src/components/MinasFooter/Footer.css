@@ -1,0 +1,97 @@
+.FooterContainer{
+background-color: #212124 ;
+}
+hr.solid {
+    border-top: 1px solid rgb(66, 66, 66);
+  }
+
+.text-outline{
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 1%;
+}
+
+.UpperText{
+    margin-right: 5%;
+    color: white;
+    
+}
+
+.UpperText:hover{
+    color: rgb(182, 180, 180);
+    text-decoration: none;
+}
+
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 14px;
+    border: none;
+  }
+  
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropup-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    bottom: 50px;
+    z-index: 1;
+  }
+  
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content a:hover {background-color: #ccc}
+  
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  .dropup:hover .dropbtn {
+    background-color:transparent;
+  }
+
+  .LowerText{
+      color:rgb(150, 149, 149);  
+      padding-bottom: 2%; 
+  }
+  .LowerText-1{
+    color:rgb(150, 149, 149);
+    margin-right: 2%; 
+}
+.LowerText-1:hover{
+  color:seashell;
+  text-decoration: none;
+  
+}
+
+  .LowerText-a{
+      display: inline-block;
+    color:rgb(150, 149, 149);
+    margin-left: 15%;
+}
+.LowerText-b{
+    display: inline;
+  color:rgb(150, 149, 149);
+  margin-left: 10%;
+}
+.Button2{
+    margin-right: 2.5%;
+    color: rgb(175, 170, 170);
+}
+
+.Button2:hover{
+    margin-right: 2.5%;
+    color: white;
+}
