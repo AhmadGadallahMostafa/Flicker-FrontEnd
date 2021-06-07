@@ -1,8 +1,8 @@
-import background from './images/Background-help4.jpg';
-import flickrhelp from './images/flickr-help.svg';
-import twitter from './images/twitter.svg';
-import arrow from './images/grey-arrow.svg';
-import search from './images/Search-icon.svg'
+import background from '../../images/Background-help4.jpg';
+import flickrhelp from '../../images/flickr-help.svg';
+import twitter from '../../images/twitter.svg';
+import arrow from '../../images/grey-arrow.svg';
+import search from '../../images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/HelpPage/Help.css';
 import { useState } from 'react';
