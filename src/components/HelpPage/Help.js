@@ -4,11 +4,11 @@ import twitter from '../../images/twitter.svg';
 import arrow from '../../images/grey-arrow.svg';
 import search from '../../images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/HelpPage/Help.css';
+import './Help.css';
 import { useState } from 'react';
 import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
-import Footer from './components/MinasFooter/Footer';
+import Footer from '../../MinasFooter/Footer';
 
 /**
  * Component for Help Page
