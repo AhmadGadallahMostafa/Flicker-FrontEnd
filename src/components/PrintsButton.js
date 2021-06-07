@@ -25,7 +25,7 @@ const PrintsButton = () => {
 			case 1:
 				return (<div>
 					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} setSelectedImage={setSelectedImage} />}
-					{galleryImages && (galleryImages.filter(image => image.title)) && (galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) == "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
+					{galleryImages && (galleryImages.filter(image => image.title)) && (galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) === "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
 					</div>);
 			case 2:
 				return (<div>
