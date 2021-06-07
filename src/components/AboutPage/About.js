@@ -1,7 +1,7 @@
 import Member from '../../images/Team_Member.jpg';
 import Account from '../../images/create-account-button.png';
-import Navbar from './components/AboutNavbar/Navbar';
-import Footer from './components/MinasFooter/Footer';
+import Navbar from '../../components/AboutNavbar/Navbar';
+import Footer from '../../components/MinasFooter/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/AboutPage/About.css';
 
