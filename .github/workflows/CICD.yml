@@ -97,11 +97,11 @@ jobs:
       
       # Task [2]: Build
       -name: Build App
-      run: |
-        cd ~/FrontEnd/
-        npm install
-        npm run build
-      
+        run: |
+          cd ~/FrontEnd/
+          npm install
+          npm run build
+        
       # Task[3]: create the SSH config file to ease the Accessing the server later
       - name: Creat SSh Config file
         run: |
