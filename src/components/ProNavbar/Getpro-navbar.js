@@ -3,7 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import profile from './images/buddyicon.png'
 import './components/ProMonthly/Getpro-navbar.css';
 
-
+/**
+ * Component for the navbar of the GetPro Page
+ *
+ * @component
+ * @example
+ * return (
+ *   <Getpro-navbar/>
+ * )
+ */
 const Navbar = () => {
     return ( 
         <nav className="getpro_navbar">
