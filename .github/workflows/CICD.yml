@@ -76,6 +76,13 @@ jobs:
     # The Runner would run on the latest version of ubuntu server
     runs-on: ubuntu-latest
     needs: Testing
+  
+  # Second Job
+  SShDeploy:
+    name: "SSh to server from Runner"
+    # The Runner would run on the latest version of ubuntu server
+    runs-on: ubuntu-latest
+    needs: Testing
     
     steps:
       # Task[1]: create the SSH config file to ease the Accessing the server later
@@ -145,5 +152,6 @@ jobs:
         run: cat ~/AfterDeploy.sh | ssh staging
       
       # Task[6]: report Failure
-      - name: Print status code of last command
-        run: echo $?
+      - name: The job has failed
+        if: ${{ failure() }}
+        run: exit 1
