@@ -1,8 +1,8 @@
-import nav_logo from './images/flickr_logo.svg';
-import cloud from './images/cloud.png'
-import search from './images/Search-icon.svg'
+import nav_logo from '../../images/flickr_logo.svg';
+import cloud from '../../images/cloud.png'
+import search from '../../images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './components/AboutNavbar/Navbar.css';
+import './Navbar.css';
 
 
 /**
