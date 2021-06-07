@@ -18,9 +18,9 @@ import Prologo from '../../images/probadge.png'
 
 
 import { useState } from 'react';
-import Getpronav from './components/ProNavbar/Getpro-navbar';
-import './components/Pro/Getpro.css';
-import Footer from './components/MinasFooter/Footer';
+import Getpronav from '../../ProNavbar/Getpro-navbar';
+import './Getpro.css';
+import Footer from '../../MinasFooter/Footer';
 
 /**
  * Component for GetPro page, the whole page containing the bundles and everything
