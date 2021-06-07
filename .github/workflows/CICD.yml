@@ -142,7 +142,7 @@ jobs:
       
       # Task[5]: Excute AfterDeploy.sh
       - name: Set Production enviroment for FrontEnd Code
-        run: cat ~/AfterDeploy.sh | ssh staging
+        run: cat ~/AfterDeploy.sh && echo "Exited with '$?'" | ssh staging
       
       # Task[6]: report Failure
       - name: The job has failed
