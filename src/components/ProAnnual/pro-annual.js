@@ -4,8 +4,27 @@ import Navbar from './components/ProAnnual/Getpro-navbar'
 import { useState } from 'react';
 import axios from 'axios';
 
+/**
+ * Component for get-pro annual bundle and connecting to BE API
+ *
+ * @component
+ * @example
+ * return (
+ *   <Pro-annual/>
+ * )
+ */
 const Pro_annual = () => {
     const[coupon,setcoupon]=useState(0);
+    const [token] = useState(localStorage.getItem("token"));
+    if (token === null)
+    {
+        localStorage.clear();
+        window.location.href = "/login";
+    } 
+    /**
+     * Connects to BE API and check the response
+     * @return  {null}
+     */
     const purshaseAnnual = (e) => {
         //debugger;
         e.preventDefault();
@@ -13,23 +32,27 @@ const Pro_annual = () => {
             "name":document.getElementById("name").value,
             "streetAddress": document.getElementById("address").value,
             "city": document.getElementById("city").value,
-            "country":document.getElementById("country").value,
+            "counrty":document.getElementById("country").value,
             "creditCardNumber":document.getElementById("card").value,
             "cvc":document.getElementById("sec").value,
             "expiryDate": document.getElementById("exp").value,
-            "zipCode": document.getElementById("postal").value
+            "zipCode": document.getElementById("postal").value,
+            "postalCode": document.getElementById("postal").value
         };
 
-        axios.defaults.baseURL = "https://www.thealphaflickr.xyz/api";
+        axios.defaults.baseURL = "https://thealphaflickr.xyz/api";
         axios.post("/user/get-pro/annual",data,{
-            headers:{"Content-Type":"application/json",'Ocp-Apim-Subscription-Key': 'token'}
+            headers:{"Content-Type":"application/json",'Authorization': 'Bearer ' + token}
         })
         .then((response) => {
-            //debugger;
+            alert("You have subscripted to annual");
         })
         .catch((error) => {
             console.log(error.config);
-            //debugger;
+            if (error.response.status === 401) {
+                localStorage.clear();
+                window.location.href = "/login";
+            }
         });
     };
     return (
