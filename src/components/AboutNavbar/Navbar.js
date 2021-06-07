@@ -4,6 +4,16 @@ import search from './images/Search-icon.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/AboutNavbar/Navbar.css';
 
+
+/**
+ * Component for normal Navbar
+ *
+ * @component
+ * @example
+ * return (
+ *   <Navbar/>
+ * )
+ */
 const Navbar = () => {
     return ( 
         <nav id="navbar-page" className="navbar">
