@@ -127,6 +127,7 @@ jobs:
           #!/bin/bash
           sudo rm -rf /var/www/thealphaflickr.xyz/
           sudo mkdir -p /var/www/thealphaflickr.xyz/
+          sudo chmod -R 777 /var/www/thealphaflickr.xyz/
           EOF
       
       # Task[5]: Excute AfterDeploy.sh
