@@ -2,7 +2,7 @@
                                                      <h1>Flickr Clone Front End</h1>
                                                      
                                                      
- <h3>This project will build with:</h3>
+ <h3>This project is build with:</h3>
  <ul>
  <li>React Js
  <li>Bootstrap
@@ -66,6 +66,9 @@ $ npm run dev
     
 ---
     
+![SignUp](https://user-images.githubusercontent.com/62334815/120910202-27732000-c67d-11eb-8d13-16abf9183849.JPG)
+    
+---    
 # Thank You Have a nice experience
     
 
