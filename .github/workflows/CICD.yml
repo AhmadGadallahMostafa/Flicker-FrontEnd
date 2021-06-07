@@ -71,14 +71,38 @@ jobs:
         run: ~/Testing.sh
   
   # Second Job
-  SShDeploy:
-    name: "SSh to server from Runner"
+  Build and Deploy:
+    name: Build App then ssh & Deploy
     # The Runner would run on the latest version of ubuntu server
     runs-on: ubuntu-latest
     needs: Testing
     
     steps:
-      # Task[1]: create the SSH config file to ease the Accessing the server later
+      # Task[1]: Get Clone Key on the Runner
+      - name: Prepare the Clone Key on the runner && clone
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo "$SSH_Clone_KEY" > ~/.ssh/Clone.key
+          chmod 600 ~/.ssh/Clone.key
+          sudo cat >>~/.ssh/config <<END
+            Host FrontEndRepo
+            Hostname github.com
+            User git
+            IdentityFile ~/.ssh/Clone.key
+          END
+          git clone FrontEndRepo:AhmadGadallahMostafa/Flicker-FrontEnd.git ~/FrontEnd
+        env:
+          SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
+      
+      # Task [2]: Build
+      -name: Build App
+      run: |
+        cd ~/FrontEnd/
+        npm install
+        npm run build
+      
+      # Task[3]: create the SSH config file to ease the Accessing the server later
       - name: Creat SSh Config file
         run: |
           mkdir -p ~/.ssh/
@@ -96,54 +120,22 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
       
-      # Task[2]: create bach scripts to ease passing it run multiple commands
-      - name: Creat Fetch.sh scripts
-        run: |
-          cat >>~/Fetch.sh<<EOF
-          mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          echo "$SSH_Clone_KEY" > ~/.ssh/Clone.key
-          chmod 600 ~/.ssh/Clone.key
-          sudo cat >>~/.ssh/config <<END
-            Host FrontEndRepo
-            Hostname github.com
-            User git
-            IdentityFile ~/.ssh/Clone.key
-          END
-          rm -rf ~/FrontEnd && echo "removed FrontEnd"
-          git clone FrontEndRepo:AhmadGadallahMostafa/Flicker-FrontEnd.git ~/FrontEnd
-          EOF
-        env:
-          SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
-      
-      # Task[3]: Test by trying to SSH to the EC2 instance and pass the script to be excuted
-      - name: Clone repos on server
-        run: cat ~/Fetch.sh | ssh staging
-      
-      # Task[4]: Creat AfterDeploy.sh script to prepare FrontEnd code for production
+      # Task[4]: Creat Deploy.sh script to prepare FrontEnd code for production
       - name: Prepare script to Set Production enviroment for FrontEnd Code
         run: |
-          cat >>~/AfterDeploy.sh<<EOF
+          cat >>~/Deploy.sh<<EOF
           #!/bin/bash
-          cd ~/FrontEnd/
-          npm install
-          npm run build
-          if [ $? -eq 0 ]
-          then
-            sudo rm -rf /var/www/thealphaflickr.xyz/
-            sudo mkdir -p /var/www/thealphaflickr.xyz/
-            sudo chown -R $USER:$USER /var/www/thealphaflickr.xyz/
-            sudo cp -r build/* /var/www/thealphaflickr.xyz/
-            sudo systemctl restart nginx
-          else
-            exit 1
-          fi
+          sudo rm -rf /var/www/thealphaflickr.xyz/
+          sudo mkdir -p /var/www/thealphaflickr.xyz/
           EOF
       
       # Task[5]: Excute AfterDeploy.sh
       - name: Set Production enviroment for FrontEnd Code
-        run: cat ~/AfterDeploy.sh | ssh staging
+        run: cat ~/Deploy.sh | ssh staging
       
       # Task[6]: report Failure
-      - name: The job has failed
-        run: echo $?
+      - name: Upload Build
+        run: scp -rp -i "~/.ssh/staging.key" ~/FrontEnd/build/* $SSH_USER@$SSH_HOST:/var/www/thealphaflickr.xyz/
+        env:
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
