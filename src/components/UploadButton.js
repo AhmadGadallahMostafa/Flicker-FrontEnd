@@ -1,7 +1,7 @@
 import './index.css';
 import { useState } from 'react';
 import axios from 'axios';
-import { formData } from 'form-data';
+// import { formData } from 'form-data';
 const token = 123; // placeholder
 
 const UploadButton = ( {setSelectedImage} ) => {
@@ -41,7 +41,7 @@ const UploadButton = ( {setSelectedImage} ) => {
 	}
 
 	function fileUpload() {
-		if (uploadedFile == null || isImage == false) return;
+		if (uploadedFile == null || isImage === false) return;
 		var formData = new FormData();
 		formData.append("photo", uploadedFile);
 		// console.log(formData.get)
@@ -77,7 +77,7 @@ const UploadButton = ( {setSelectedImage} ) => {
 			
 			<input className="upload-button" type="file" onChange={ setSelectedFile }/>
 			{<button onClick={fileUpload}>Upload!</button>}
-			{(loadingProgress == 100) ? <div>Image uploaded successfully to the photostream!</div> : null}
+			{(loadingProgress === 100) ? <div>Image uploaded successfully to the photostream!</div> : null}
 			{toggleErrorMessage()}
 
 		</div>
