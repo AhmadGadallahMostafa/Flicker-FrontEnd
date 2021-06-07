@@ -96,7 +96,7 @@ jobs:
           SSH_Clone_KEY: ${{ secrets.SSH_FrontEnd_Clone_KEY }}
       
       # Task [2]: Build
-      -name: Build App
+      - name: Build App
         run: |
           cd ~/FrontEnd/
           npm install
