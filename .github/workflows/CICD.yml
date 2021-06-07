@@ -140,6 +140,6 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
 
-      # Task[7]: Restart Nginx
+      # Task[7]: Restart Nginx To catch edits
       - name: Restart Nginx
         run: sudo systemctl restart nginx | ssh staging
