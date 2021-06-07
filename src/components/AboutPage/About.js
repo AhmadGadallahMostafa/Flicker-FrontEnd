@@ -5,6 +5,15 @@ import Footer from './components/MinasFooter/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/AboutPage/About.css';
 
+/**
+ * Component for About Page
+ *
+ * @component
+ * @example
+ * return (
+ *   <About/>
+ * )
+ */
 const About = () => {
 
     return ( 
