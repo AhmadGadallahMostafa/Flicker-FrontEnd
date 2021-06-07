@@ -4,8 +4,28 @@ import Navbar from './components/ProNavbar/Getpro-navbar'
 import { useState } from 'react';
 import axios from 'axios';
 
+/**
+ * Component for get-pro monthly bundle and connecting to BE API
+ *
+ * @component
+ * @example
+ * return (
+ *   <Pro-monthly/>
+ * )
+ */
 const Pro_monthly = () => {
     const[coupon,setcoupon]=useState(0);
+    const [token] = useState(localStorage.getItem("token"));
+    if (token === null)
+    {
+        localStorage.clear();
+        window.location.href = "/login";
+    }
+    
+    /**
+     * Connects to BE API and check the response
+     * @return  {null}
+     */
     const purshaseMonthly = (e) => {
         //debugger;
         e.preventDefault();
@@ -13,24 +33,29 @@ const Pro_monthly = () => {
             "name":document.getElementById("name").value,
             "streetAddress": document.getElementById("address").value,
             "city": document.getElementById("city").value,
-            "country":document.getElementById("country").value,
+            "counrty":document.getElementById("country").value,
             "creditCardNumber":document.getElementById("card").value,
             "cvc":document.getElementById("sec").value,
             "expiryDate": document.getElementById("exp").value,
-            "zipCode": document.getElementById("postal").value
+            "zipCode": document.getElementById("postal").value,
+            "postalCode": document.getElementById("postal").value
         };
-
-        axios.defaults.baseURL = "http://www.thealphaflickr.xyz/api";
+        console.log(data);
+        axios.defaults.baseURL = "https://thealphaflickr.xyz/api";
         axios.post("/user/get-pro/monthly",data,{
-            headers:{"Content-Type":"application/json",'Ocp-Apim-Subscription-Key': 'token'}
+            headers:{"Content-Type":"application/json","Authorization":"Bearer " + token}
         })
         .then((response) => {
             //debugger;
-            console.log(response);
+            console.log(response.data);
+            alert("You have subscripted to one month Pro account");
         })
         .catch((error) => {
-            console.log(error.config);
-            //debugger;
+            console.log(error.response);
+            if (error.response.status === 401) {
+                localStorage.clear();
+                window.location.href = "/login";
+            }
         });
     };
     return (
