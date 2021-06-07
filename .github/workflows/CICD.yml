@@ -12,7 +12,7 @@ on:
     branches: [ main ]
 
 jobs:
-  # This workflow contains a Two jobs called "Testing - SShDeploy"
+  # This workflow contains a Two jobs called "Testing - BuildDeploy"
 
 
   # First Job
@@ -139,3 +139,7 @@ jobs:
         env:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+
+      # Task[7]: Restart Nginx
+      - name: Restart Nginx
+        run: sudo systemctl restart nginx | ssh staging
