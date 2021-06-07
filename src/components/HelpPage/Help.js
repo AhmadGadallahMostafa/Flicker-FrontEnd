@@ -10,7 +10,15 @@ import { DropdownButton } from 'react-bootstrap';
 import { Dropdown } from 'react-bootstrap';
 import Footer from './components/MinasFooter/Footer';
 
-
+/**
+ * Component for Help Page
+ *
+ * @component
+ * @example
+ * return (
+ *   <Help/>
+ * )
+ */
 const Help = () => {
     const [leftcoltopics,setleftcoltopics]=useState(0);
     console.log(leftcoltopics);
