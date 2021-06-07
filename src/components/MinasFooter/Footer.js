@@ -7,7 +7,15 @@ import './components/MinasFooter/Footer.css'
 
 
 
-
+/**
+ * Component for Footer component for all pages
+ *
+ * @component
+ * @example
+ * return (
+ *   <Footer/>
+ * )
+ */
 function Footer() {
    
     return (
