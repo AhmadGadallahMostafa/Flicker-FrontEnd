@@ -133,7 +133,7 @@ jobs:
       - name: Set Production enviroment for FrontEnd Code
         run: cat ~/Deploy.sh | ssh staging
       
-      # Task[6]: report Failure
+      # Task[6]: Upload Build from runner to server
       - name: Upload Build
         run: scp -rp -i "~/.ssh/staging.key" ~/FrontEnd/build/* $SSH_USER@$SSH_HOST:/var/www/thealphaflickr.xyz/
         env:
