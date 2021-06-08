@@ -147,4 +147,4 @@ const ExploreImages = ({ exploreImages }) => {
 	);
 }
 
-export default ExploreImages
+export default ExploreImages;
