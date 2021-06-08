@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { formData } from 'form-data';
-const token = 123;
+// import { formData } from 'form-data';
 
 const UploadButton = ( {setSelectedImage} ) => {
 
@@ -9,6 +8,13 @@ const UploadButton = ( {setSelectedImage} ) => {
 	const [isImage, setIsImage] = useState(null);
 	const [loadingProgress, setLoadingProgress] = useState(0);
 
+	const [token] = useState(localStorage.getItem("token"));
+    if (token === null)
+    {
+        localStorage.clear();
+        window.location.href = "/login";
+    } 
+	
 	function setSelectedFile (event) {
 		// console.log(event.target.files[0]);
 		if (event.target.files[0].type.startsWith('image/')) {
@@ -40,7 +46,7 @@ const UploadButton = ( {setSelectedImage} ) => {
 	}
 
 	function fileUpload() {
-		if (uploadedFile == null || isImage == false) return;
+		if (uploadedFile == null || isImage === false) return;
 		var formData = new FormData();
 		formData.append("photo", uploadedFile);
 		// console.log(formData.get)
@@ -76,11 +82,11 @@ const UploadButton = ( {setSelectedImage} ) => {
 			
 			<input className="upload-button" type="file" onChange={ setSelectedFile }/>
 			{<button onClick={fileUpload}>Upload!</button>}
-			{(loadingProgress == 100) ? <div>Image uploaded successfully to the photostream!</div> : null}
+			{(loadingProgress === 100) ? <div>Image uploaded successfully to the photostream!</div> : null}
 			{toggleErrorMessage()}
 
 		</div>
 	);
 }
 
-export default UploadButton
+export default UploadButton;
