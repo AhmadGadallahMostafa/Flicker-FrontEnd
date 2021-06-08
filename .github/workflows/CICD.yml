@@ -101,6 +101,8 @@ jobs:
           cd ~/FrontEnd/
           npm install
           npm run build
+        env: 
+          CI: false
         
       # Task[3]: create the SSH config file to ease the Accessing the server later
       - name: Creat SSh Config file
