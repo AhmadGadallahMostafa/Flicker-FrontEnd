@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Albums from './Albums';
 import UploadButton from './UploadButton';
 import { Link } from 'react-router-dom';
-const userId = 1; // placeholder
+const userId = "60b6ea64c026a02ea78531e6"; // placeholder
 
 const PrintsButton = () => {
 	const [show, setShow] = useState(false);
