@@ -6,17 +6,17 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./Components/Authorization/PrivateRoute";
 import Home from "./Components/Home/Home";
 import Forget from "./Components/SignInUp/ForgetPass";
-import About from './Components/AboutPage/About';
-import Help from './Components/HelpPage/Help'
-import Getpro from './Components/Pro/Getpro';
-import Proannual from './Components/ProAnnual/pro-annual';
-import Promonth from './Components/ProMonthly/pro-monthly';
-import Pro3month from './Components/Pro3month/pro-3month';
-import GridText from './Components/GridText';
-import PrintsButton from './Components/PrintsButton';
-import Explore from './Components/Explore';
-import FAQ from './Components/FAQ';
-import Footer from './Components/MinasFooter/Footer'
+import About from './components/AboutPage/About';
+import Help from './components/HelpPage/Help'
+import Getpro from './components/Pro/Getpro';
+import Proannual from './components/ProAnnual/pro-annual';
+import Promonth from './components/ProMonthly/pro-monthly';
+import Pro3month from './components/Pro3month/pro-3month';
+import GridText from './components/GridText';
+import PrintsButton from './components/PrintsButton';
+import Explore from './components/Explore';
+import FAQ from './components/FAQ';
+import Footer from './components/MinasFooter/Footer'
 import "./App.scss";
 
 
