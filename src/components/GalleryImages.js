@@ -24,7 +24,7 @@ const GalleryImages = ({ galleryImages, setSelectedImage }) => {
 		<div className="image-gallery">
 			{galleryImages.map((image => (
 				<div className={isActive === image._id ? "grid-item active" : "grid-item"} onClick={() => { setActive(image._id); setSelectedImage(image._id) }} key={image._id}>
-					<img className={isActive === image._id ? "grid-item-image active" : "grid-item-image"} src={getSrc(image._id)} alt={image.title} />
+					<img className={isActive === image._id ? "grid-item-image active" : "grid-item-image"} src={getSrc(image.url)} alt={image.title} />
 					<div className="grid-text">
 						<div className="grid-item-text" >{image.title}</div>
 						<div className="grid-item-subtext" >by {image.authorId /**Should be just author? */}</div>
