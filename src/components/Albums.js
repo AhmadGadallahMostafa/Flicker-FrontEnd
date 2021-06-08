@@ -30,4 +30,4 @@ const Albums = ({ albums, galleryImages }) => {
 	);
 }
 
-export default Albums
+export default Albums;
