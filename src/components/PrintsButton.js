@@ -10,7 +10,7 @@ import Form from 'react-bootstrap/Form';
 import Albums from './Albums';
 import UploadButton from './UploadButton';
 import { Link } from 'react-router-dom';
-const userId = 1; // placeholder
+const userId = "60b6ea64c026a02ea78531e6"; // placeholder
 
 const PrintsButton = () => {
 	const [show, setShow] = useState(false);
@@ -23,13 +23,15 @@ const PrintsButton = () => {
 	const showSelectedTab = () => {
 		switch (selectedTab) {
 			case 1:
+				if(galleryImages)
+					console.log(galleryImages.photos);	
 				return (<div>
-					{galleryImages && (galleryImages.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} setSelectedImage={setSelectedImage} />}
-					{galleryImages && (galleryImages.filter(image => image.title)) && (galleryImages.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) === "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
+					{galleryImages && (galleryImages.photos.filter(image => image.title)) && <GalleryImages galleryImages={galleryImages.photos.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))} setSelectedImage={setSelectedImage} />}
+					{galleryImages && (galleryImages.photos.filter(image => image.title)) && (galleryImages.photos.filter(image => image.title.toLowerCase().includes(searchField.toLowerCase()))) === "" && <center>No search results found for "{searchField}"<br /> Try uploading some images!</center>}
 					</div>);
 			case 2:
 				return (<div>
-					{galleryImages && <Albums albums={albums} galleryImages={galleryImages}/>}
+					{(albums.count > 0) && galleryImages && <Albums albums={albums} galleryImages={galleryImages}/>}
 				</div>);
 			case 3:
 				return <UploadButton setSelectedImage={setSelectedImage}/>;

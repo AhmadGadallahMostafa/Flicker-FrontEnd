@@ -2,7 +2,6 @@ import './index.css';
 import { useState } from 'react';
 import axios from 'axios';
 // import { formData } from 'form-data';
-const token = 123; // placeholder
 
 const UploadButton = ( {setSelectedImage} ) => {
 
@@ -10,6 +9,13 @@ const UploadButton = ( {setSelectedImage} ) => {
 	const [isImage, setIsImage] = useState(null);
 	const [loadingProgress, setLoadingProgress] = useState(0);
 
+	const [token] = useState(localStorage.getItem("token"));
+    if (token === null)
+    {
+        localStorage.clear();
+        window.location.href = "/login";
+    } 
+	
 	function setSelectedFile (event) {
 		// console.log(event.target.files[0]);
 		if (event.target.files[0].type.startsWith('image/')) {
