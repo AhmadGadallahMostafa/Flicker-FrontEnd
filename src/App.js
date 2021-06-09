@@ -8,7 +8,7 @@ import Home from "./Components/Home/Home";
 import Forget from "./Components/SignInUp/ForgetPass";
 import About from './components/AboutPage/About';
 import Help from './components/HelpPage/Help'
-import Getpro from './components/Pro/Getpro';
+//import Getpro from './components/Pro/Getpro';
 import Proannual from './components/ProAnnual/pro-annual';
 import Promonth from './components/ProMonthly/pro-monthly';
 import Pro3month from './components/Pro3month/pro-3month';
